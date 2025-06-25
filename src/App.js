@@ -105,28 +105,6 @@ function App() {
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/knime.svg" alt="KNIME" title="KNIME" style={{background: '#fff', borderRadius: '8px', padding: '4px'}} />
           </div>
         </section>
-        <section id="testimonials" className="section">
-          <h2>Testimonials</h2>
-          <div className="testimonials-list">
-            <blockquote>
-              "Maanya is a creative problem solver who brings energy and empathy to every project. Her technical skills are matched only by her passion for making a difference."<br/>
-              <span>- Mentor, UT Austin</span>
-            </blockquote>
-            <blockquote>
-              "Working with Maanya was a fantastic experience. She's a natural leader and a true collaborator—always ready to help and inspire those around her."<br/>
-              <span>- Peer, Hackathon Team</span>
-            </blockquote>
-          </div>
-        </section>
-        <section id="contactform" className="section contact">
-          <h2>Contact Me</h2>
-          <form className="contact-form" onSubmit={e => { e.preventDefault(); alert('Thank you for reaching out!'); }}>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" className="cta-btn">Send Message</button>
-          </form>
-        </section>
         <section id="projects" className="section">
           <h2>Projects</h2>
           <ul>
@@ -186,6 +164,15 @@ function App() {
           <ul>
             <li><b>"Dismantling Algorithmic Prejudice"</b> (Greenhouse Publishing, 2023): Theoretical exploration of bias, fairness, and ethics in AI systems.</li>
           </ul>
+        </section>
+        <section id="contactform" className="section contact">
+          <h2>Contact Me</h2>
+          <form className="contact-form" onSubmit={e => { e.preventDefault(); alert('Thank you for reaching out!'); }}>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" className="cta-btn">Send Message</button>
+          </form>
         </section>
         <section id="contact" className="section contact">
           <h2>Contact</h2>
