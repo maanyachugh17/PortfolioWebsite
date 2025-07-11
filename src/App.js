@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +15,51 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 3 second loading screen
+    return () => clearTimeout(timer);
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
+  if (isLoading) {
+    return (
+      <div className="loading-screen">
+        <div className="loading-container">
+          <div className="code-matrix">
+            <div className="code-line">{'<html>'}</div>
+            <div className="code-line">{'  <body>'}</div>
+            <div className="code-line">{'    <div className="portfolio">'}</div>
+            <div className="code-line">{'      <Maanya />'}</div>
+            <div className="code-line">{'    </div>'}</div>
+            <div className="code-line">{'  </body>'}</div>
+            <div className="code-line">{'</html>'}</div>
+          </div>
+          <div className="loading-text">
+            <span className="loading-word">Loading</span>
+            <span className="loading-dots">
+              <span>.</span><span>.</span><span>.</span>
+            </span>
+          </div>
+          <div className="floating-elements">
+            <div className="floating-icon">⚛️</div>
+            <div className="floating-icon">💻</div>
+            <div className="floating-icon">🚀</div>
+            <div className="floating-icon">⚡</div>
+            <div className="floating-icon">🎯</div>
+            <div className="floating-icon">🔥</div>
+          </div>
+          <div className="progress-bar">
+            <div className="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`portfolio-root ${darkMode ? 'dark-mode' : 'light-mode'}`}>
