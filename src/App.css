@@ -320,6 +320,7 @@ main {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   border: 4px solid var(--border-color);
   box-shadow: var(--shadow-heavy);
   transition: all 0.3s ease;
@@ -1197,6 +1198,7 @@ main {
     width: 160px;
     height: 160px;
     margin-bottom: 1rem;
+    object-position: center 20%;
   }
   
   .hero-text {
@@ -1386,6 +1388,7 @@ main {
     width: 140px;
     height: 140px;
     margin-bottom: 0.75rem;
+    object-position: center 25%;
   }
   
   .hero-greeting {
