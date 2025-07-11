@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 second loading screen
+    }, 2000); // 2 second loading screen
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,31 +30,9 @@ function App() {
     return (
       <div className="loading-screen">
         <div className="loading-container">
-          <div className="code-matrix">
-            <div className="code-line">{'<html>'}</div>
-            <div className="code-line">{'  <body>'}</div>
-            <div className="code-line">{'    <div className="portfolio">'}</div>
-            <div className="code-line">{'      <Maanya />'}</div>
-            <div className="code-line">{'    </div>'}</div>
-            <div className="code-line">{'  </body>'}</div>
-            <div className="code-line">{'</html>'}</div>
-          </div>
-          <div className="loading-text">
-            <span className="loading-word">Loading</span>
-            <span className="loading-dots">
-              <span>.</span><span>.</span><span>.</span>
-            </span>
-          </div>
-          <div className="floating-elements">
-            <div className="floating-icon">⚛️</div>
-            <div className="floating-icon">💻</div>
-            <div className="floating-icon">🚀</div>
-            <div className="floating-icon">⚡</div>
-            <div className="floating-icon">🎯</div>
-            <div className="floating-icon">🔥</div>
-          </div>
-          <div className="progress-bar">
-            <div className="progress-fill"></div>
+          <div className="loading-content">
+            <div className="loading-name">Maanya Chugh</div>
+            <div className="loading-line"></div>
           </div>
         </div>
       </div>
