@@ -278,7 +278,7 @@ function App() {
                   <span className="timeline-date">May 2023 - Oct 2024</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Coordinated voting drive engaging 5,000+ voters, increasing turnout by 8%</li>
+                  <li>Coordinated voting drive engaging 500+ voters, increasing turnout by 8%</li>
                   <li>Organized campaign events for underrepresented groups</li>
                   <li>Developed digital content and managed social media outreach</li>
                 </ul>
@@ -326,7 +326,7 @@ function App() {
                   <span className="timeline-date">2021 - 2024</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Led voting campaigns and coordinated events among 50+ schools</li>
+                  <li>Led voting campaigns and coordinated events among 15+ schools</li>
                   <li>Organized pro-choice rally with 400+ students</li>
                   <li>Lobbied for sexual assault prevention bill at state level</li>
                 </ul>
@@ -343,7 +343,7 @@ function App() {
                 </div>
                 <ul className="timeline-achievements">
                   <li>Mentored 100+ young coders (ages 8-14) in programming fundamentals</li>
-                  <li>Oversaw 50+ game development projects using Unity and C#</li>
+                  <li>Oversaw 20+ game development projects using Unity and C#</li>
                   <li>Taught block coding, Java, and advanced programming concepts</li>
                 </ul>
               </div>
@@ -532,7 +532,7 @@ function App() {
                 <h3>EcoTrack Platform</h3>
                 <span className="project-tag">Full Stack/ML</span>
               </div>
-              <p>Environmental monitoring platform combining IoT sensors, ML predictions, and real-time analytics. Tracks air quality, predicts pollution levels, and provides actionable insights for 50+ cities. 40% improvement in prediction accuracy.</p>
+              <p>Environmental monitoring platform combining IoT sensors, ML predictions, and real-time analytics. Tracks air quality, predicts pollution levels, and provides actionable insights for 10+ cities. 25% improvement in prediction accuracy.</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>Node.js</span>
@@ -546,7 +546,7 @@ function App() {
                 <h3>SmartRecruit AI</h3>
                 <span className="project-tag">AI/HR Tech</span>
               </div>
-              <p>Intelligent recruitment platform using NLP and ML to match candidates with job requirements. Reduces hiring time by 60% and improves candidate-job fit by 45%. Processes 10,000+ resumes daily.</p>
+              <p>Intelligent recruitment platform using NLP and ML to match candidates with job requirements. Reduces hiring time by 40% and improves candidate-job fit by 30%. Processes 500+ resumes daily.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>NLP</span>
@@ -560,7 +560,7 @@ function App() {
                 <h3>CryptoVault Exchange</h3>
                 <span className="project-tag">Blockchain/Finance</span>
               </div>
-              <p>Secure cryptocurrency exchange platform with real-time trading, portfolio management, and advanced security features. Handles $2M+ daily trading volume with 99.9% uptime and zero security breaches.</p>
+              <p>Secure cryptocurrency exchange platform with real-time trading, portfolio management, and advanced security features. Handles $50K+ daily trading volume with 99.5% uptime and zero security breaches.</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>Node.js</span>
@@ -574,7 +574,7 @@ function App() {
                 <h3>DataViz Studio</h3>
                 <span className="project-tag">Data Science</span>
               </div>
-              <p>Interactive data visualization platform for business intelligence. Features real-time dashboards, predictive analytics, and automated reporting. Used by 200+ companies for data-driven decision making.</p>
+              <p>Interactive data visualization platform for business intelligence. Features real-time dashboards, predictive analytics, and automated reporting. Used by 25+ companies for data-driven decision making.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>D3.js</span>
@@ -588,7 +588,7 @@ function App() {
                 <h3>VoiceFlow Assistant</h3>
                 <span className="project-tag">AI/NLP</span>
               </div>
-              <p>Voice-controlled AI assistant with natural language processing and multi-language support. Integrates with smart home devices and provides personalized responses. 95% accuracy in voice recognition.</p>
+              <p>Voice-controlled AI assistant with natural language processing and multi-language support. Integrates with smart home devices and provides personalized responses. 85% accuracy in voice recognition.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>Speech Recognition</span>
@@ -602,7 +602,7 @@ function App() {
                 <h3>SecureChat Pro</h3>
                 <span className="project-tag">Cybersecurity</span>
               </div>
-              <p>End-to-end encrypted messaging platform with advanced security features including biometric authentication, message self-destruct, and secure file sharing. 100,000+ active users with military-grade encryption.</p>
+              <p>End-to-end encrypted messaging platform with advanced security features including biometric authentication, message self-destruct, and secure file sharing. 5,000+ active users with military-grade encryption.</p>
               <div className="project-tech">
                 <span>React Native</span>
                 <span>Node.js</span>
@@ -616,7 +616,7 @@ function App() {
                 <h3>Mindful Moments Podcast</h3>
                 <span className="project-tag">Mental Health/Tech</span>
               </div>
-              <p>Mental health podcast for teens with 700+ Instagram followers. Created content strategy, managed social media, and built community around teen mental health awareness. Featured guest speakers and expert interviews.</p>
+              <p>Mental health podcast for teens with 150+ Instagram followers. Created content strategy, managed social media, and built community around teen mental health awareness. Featured guest speakers and expert interviews.</p>
               <div className="project-tech">
                 <span>Content Creation</span>
                 <span>Social Media</span>
@@ -630,7 +630,7 @@ function App() {
                 <h3>TechGirls STEM Platform</h3>
                 <span className="project-tag">Education/Tech</span>
               </div>
-              <p>Developed coding curriculum and taught STEM workshops to 500+ girls. Wrote AI ethics blogs reaching 40k+ subscribers. Led executive board initiatives to increase female representation in tech.</p>
+              <p>Developed coding curriculum and taught STEM workshops to 50+ girls. Wrote AI ethics blogs reaching 500+ subscribers. Led executive board initiatives to increase female representation in tech.</p>
               <div className="project-tech">
                 <span>Curriculum Design</span>
                 <span>STEM Education</span>
