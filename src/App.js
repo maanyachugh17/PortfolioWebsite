@@ -114,7 +114,7 @@ function App() {
                 <span className="stat-label">Awards</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">15+</span>
+                <span className="stat-number">18+</span>
                 <span className="stat-label">Projects</span>
               </div>
             </div>
@@ -217,6 +217,54 @@ function App() {
                   <li>Conducted user research and testing to optimize UX</li>
                   <li>Delivered bi-weekly product demos with 90% user engagement</li>
                   <li>Boosted satisfaction scores by 20% through interface improvements</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Youth Ambassador Team Lead</h3>
+                  <span className="timeline-company">Juvenile Diabetes Research Foundation (JDRF)</span>
+                  <span className="timeline-date">2018 - 2024</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Led 30+ fundraisers raising $50k+ for T1D research over 6 years</li>
+                  <li>Advocated for insulin bill and managed social media campaigns</li>
+                  <li>Directed ambassador program and coordinated community outreach</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>NJ Political Director & Co-founder</h3>
+                  <span className="timeline-company">High School Democrats of America</span>
+                  <span className="timeline-date">2021 - 2024</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Led voting campaigns and coordinated events among 50+ schools</li>
+                  <li>Organized pro-choice rally with 400+ students</li>
+                  <li>Lobbied for sexual assault prevention bill at state level</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Code Ninjas Teacher/Sensei</h3>
+                  <span className="timeline-company">Code Ninjas</span>
+                  <span className="timeline-date">2019 - 2022</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Mentored 100+ young coders (ages 8-14) in programming fundamentals</li>
+                  <li>Oversaw 50+ game development projects using Unity and C#</li>
+                  <li>Taught block coding, Java, and advanced programming concepts</li>
                 </ul>
               </div>
             </div>
@@ -482,6 +530,48 @@ function App() {
                 <span>WebRTC</span>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>Mindful Moments Podcast</h3>
+                <span className="project-tag">Mental Health/Tech</span>
+              </div>
+              <p>Mental health podcast for teens with 700+ Instagram followers. Created content strategy, managed social media, and built community around teen mental health awareness. Featured guest speakers and expert interviews.</p>
+              <div className="project-tech">
+                <span>Content Creation</span>
+                <span>Social Media</span>
+                <span>Community Building</span>
+                <span>Mental Health</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>TechGirls STEM Platform</h3>
+                <span className="project-tag">Education/Tech</span>
+              </div>
+              <p>Developed coding curriculum and taught STEM workshops to 500+ girls. Wrote AI ethics blogs reaching 40k+ subscribers. Led executive board initiatives to increase female representation in tech.</p>
+              <div className="project-tech">
+                <span>Curriculum Design</span>
+                <span>STEM Education</span>
+                <span>Content Writing</span>
+                <span>Leadership</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>VEX Robotics Strategy System</h3>
+                <span className="project-tag">Robotics/Engineering</span>
+              </div>
+              <p>Led robotics team to consecutive state qualifications and nationals invite. Built robot expansion, devised match strategies, and earned Innovate & Design Award competing against 50+ teams.</p>
+              <div className="project-tech">
+                <span>Robotics</span>
+                <span>Engineering</span>
+                <span>Strategy</span>
+                <span>Team Leadership</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -515,6 +605,27 @@ function App() {
               <div className="award-content">
                 <h3>1st Place Technica Hackathon: Best Use of Cryptocurrency</h3>
                 <p>Developed creative blockchain solution earning top honors for innovation</p>
+              </div>
+            </div>
+            <div className="award-item">
+              <div className="award-icon">🏆</div>
+              <div className="award-content">
+                <h3>National Merit Commended Scholar & AP Scholar with Honor</h3>
+                <p>Academic excellence recognition for outstanding performance in advanced placement courses</p>
+              </div>
+            </div>
+            <div className="award-item">
+              <div className="award-icon">🤖</div>
+              <div className="award-content">
+                <h3>VEX Robotics Innovate & Design Award</h3>
+                <p>Earned prestigious robotics award competing against 50+ teams at state level</p>
+              </div>
+            </div>
+            <div className="award-item">
+              <div className="award-icon">📚</div>
+              <div className="award-content">
+                <h3>Girls Who Code Summer Immersion Program</h3>
+                <p>Selected for competitive program teaching advanced programming and computer science concepts</p>
               </div>
             </div>
           </div>
