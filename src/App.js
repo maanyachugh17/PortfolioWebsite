@@ -255,6 +255,21 @@ function App() {
                 <span className="skill-tag">Linux CLI</span>
               </div>
             </div>
+            <div className="skill-category">
+              <h3>Data Science & Analytics</h3>
+              <div className="skill-grid">
+                <span className="skill-tag">Machine Learning</span>
+                <span className="skill-tag">Statistical Analysis</span>
+                <span className="skill-tag">Financial Modeling</span>
+                <span className="skill-tag">Risk Management</span>
+                <span className="skill-tag">Time Series Analysis</span>
+                <span className="skill-tag">Quantitative Finance</span>
+                <span className="skill-tag">Pandas</span>
+                <span className="skill-tag">NumPy</span>
+                <span className="skill-tag">Scikit-learn</span>
+                <span className="skill-tag">TensorFlow</span>
+              </div>
+            </div>
           </div>
           
           <div className="tech-showcase">
@@ -353,6 +368,20 @@ function App() {
                 <span>Java</span>
                 <span>Mobile Dev</span>
                 <span>UX Design</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>QuantFin Analytics</h3>
+                <span className="project-tag">Quantitative Finance</span>
+              </div>
+              <p>Comprehensive financial analysis platform with ML-powered price prediction, risk management, and interactive dashboards. Achieved 85% accuracy in stock direction prediction and 23% risk reduction through portfolio optimization.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Financial Modeling</span>
+                <span>Risk Analytics</span>
               </div>
             </div>
           </div>
