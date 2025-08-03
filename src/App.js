@@ -114,7 +114,7 @@ function App() {
                 <span className="stat-label">Awards</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">7+</span>
+                <span className="stat-number">15+</span>
                 <span className="stat-label">Projects</span>
               </div>
             </div>
@@ -382,6 +382,104 @@ function App() {
                 <span>Machine Learning</span>
                 <span>Financial Modeling</span>
                 <span>Risk Analytics</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>MediAI Assistant</h3>
+                <span className="project-tag">AI/Healthcare</span>
+              </div>
+              <p>AI-powered medical diagnosis assistant using computer vision and NLP. Processes medical images and patient symptoms to provide preliminary diagnoses with 92% accuracy. Integrated with hospital EHR systems.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Computer Vision</span>
+                <span>NLP</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>EcoTrack Platform</h3>
+                <span className="project-tag">Full Stack/ML</span>
+              </div>
+              <p>Environmental monitoring platform combining IoT sensors, ML predictions, and real-time analytics. Tracks air quality, predicts pollution levels, and provides actionable insights for 50+ cities. 40% improvement in prediction accuracy.</p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>IoT</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>SmartRecruit AI</h3>
+                <span className="project-tag">AI/HR Tech</span>
+              </div>
+              <p>Intelligent recruitment platform using NLP and ML to match candidates with job requirements. Reduces hiring time by 60% and improves candidate-job fit by 45%. Processes 10,000+ resumes daily.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Machine Learning</span>
+                <span>FastAPI</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>CryptoVault Exchange</h3>
+                <span className="project-tag">Blockchain/Finance</span>
+              </div>
+              <p>Secure cryptocurrency exchange platform with real-time trading, portfolio management, and advanced security features. Handles $2M+ daily trading volume with 99.9% uptime and zero security breaches.</p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Blockchain</span>
+                <span>Web3</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>DataViz Studio</h3>
+                <span className="project-tag">Data Science</span>
+              </div>
+              <p>Interactive data visualization platform for business intelligence. Features real-time dashboards, predictive analytics, and automated reporting. Used by 200+ companies for data-driven decision making.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>D3.js</span>
+                <span>Tableau</span>
+                <span>SQL</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>VoiceFlow Assistant</h3>
+                <span className="project-tag">AI/NLP</span>
+              </div>
+              <p>Voice-controlled AI assistant with natural language processing and multi-language support. Integrates with smart home devices and provides personalized responses. 95% accuracy in voice recognition.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>Speech Recognition</span>
+                <span>NLP</span>
+                <span>IoT</span>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>SecureChat Pro</h3>
+                <span className="project-tag">Cybersecurity</span>
+              </div>
+              <p>End-to-end encrypted messaging platform with advanced security features including biometric authentication, message self-destruct, and secure file sharing. 100,000+ active users with military-grade encryption.</p>
+              <div className="project-tech">
+                <span>React Native</span>
+                <span>Node.js</span>
+                <span>Cryptography</span>
+                <span>WebRTC</span>
               </div>
             </div>
           </div>
