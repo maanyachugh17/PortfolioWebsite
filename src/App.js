@@ -63,10 +63,10 @@ function App() {
             <div className="hero-text">
               <span className="hero-greeting">👋 Hello, I'm</span>
               <h1 className="hero-title">Maanya Chugh</h1>
-              <p className="hero-subtitle">Passionate Technologist & Informatics Student</p>
+              <p className="hero-subtitle">Full Stack Developer & AI Engineer</p>
               <p className="hero-description">
-                Blending software engineering, data science, and human-centered technology 
-                to create meaningful impact through innovation.
+                Building end-to-end applications with modern web technologies and AI/ML solutions. 
+                From frontend interfaces to backend systems and intelligent algorithms.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
