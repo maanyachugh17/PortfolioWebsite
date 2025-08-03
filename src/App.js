@@ -177,6 +177,86 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
+                  <h3>UX Design Fellow</h3>
+                  <span className="timeline-company">Longhorn Developers - UT Austin</span>
+                  <span className="timeline-date">Aug 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Lead UX design initiatives for student-developed applications and platforms</li>
+                  <li>Mentor fellow students in user-centered design principles and prototyping</li>
+                  <li>Collaborate with development teams to create intuitive user experiences</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Operations Strategist</h3>
+                  <span className="timeline-company">Kupid Dating - UT Austin</span>
+                  <span className="timeline-date">Aug 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Develop and implement strategic initiatives to enhance user engagement and platform growth</li>
+                  <li>Analyze user data and market trends to optimize dating app operations</li>
+                  <li>Coordinate cross-functional teams to improve user experience and retention</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Community Engagement Agency Member</h3>
+                  <span className="timeline-company">Student Government - UT Austin</span>
+                  <span className="timeline-date">Aug 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Represent student interests and advocate for community needs at university level</li>
+                  <li>Organize campus-wide events and initiatives to foster student engagement</li>
+                  <li>Collaborate with administration to implement student-driven policy changes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Texas Global Ambassador</h3>
+                  <span className="timeline-company">Texas Global - UT Austin</span>
+                  <span className="timeline-date">Aug 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Represent UT Austin at international events and promote global engagement</li>
+                  <li>Assist international students with cultural integration and campus resources</li>
+                  <li>Organize cross-cultural events and international student orientation programs</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Active Member</h3>
+                  <span className="timeline-company">Indian Cultural Association & Type Texas - UT Austin</span>
+                  <span className="timeline-date">Aug 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Participate in cultural events and promote diversity on campus</li>
+                  <li>Contribute to typography and design community through Type Texas</li>
+                  <li>Foster inclusive environment and cultural exchange among students</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
                   <h3>Technology Developer & Outreach Coordinator</h3>
                   <span className="timeline-company">A Sustainable Future</span>
                   <span className="timeline-date">Oct 2022 - May 2024</span>
