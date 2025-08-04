@@ -47,6 +47,7 @@ function App() {
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#leadership">Leadership</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -177,6 +178,44 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
+                  <h3>Voter Engagement Intern</h3>
+                  <span className="timeline-company">Zwicker, Freiman, & Drulis Political Campaign</span>
+                  <span className="timeline-date">May 2023 - Oct 2024</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Coordinated voting drive engaging 500+ voters, increasing turnout by 8%</li>
+                  <li>Organized campaign events for underrepresented groups</li>
+                  <li>Developed digital content and managed social media outreach</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Product & Tech Intern</h3>
+                  <span className="timeline-company">Jetson Financial</span>
+                  <span className="timeline-date">May - Sep 2023</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Conducted user research and testing to optimize UX</li>
+                  <li>Delivered bi-weekly product demos with 90% user engagement</li>
+                  <li>Boosted satisfaction scores by 20% through interface improvements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership & Activities Section */}
+        <section id="leadership" className="section glass-card">
+          <h2>Leadership & Activities</h2>
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
                   <h3>UX Design Fellow</h3>
                   <span className="timeline-company">Longhorn Developers - UT Austin</span>
                   <span className="timeline-date">Aug 2024 - Present</span>
@@ -265,38 +304,6 @@ function App() {
                   <li>Leveraged advanced data modeling to optimize waste management for 10 educational institutions</li>
                   <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
                   <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Voter Engagement Intern</h3>
-                  <span className="timeline-company">Zwicker, Freiman, & Drulis Political Campaign</span>
-                  <span className="timeline-date">May 2023 - Oct 2024</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Coordinated voting drive engaging 500+ voters, increasing turnout by 8%</li>
-                  <li>Organized campaign events for underrepresented groups</li>
-                  <li>Developed digital content and managed social media outreach</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Product & Tech Intern</h3>
-                  <span className="timeline-company">Jetson Financial</span>
-                  <span className="timeline-date">May - Sep 2023</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Conducted user research and testing to optimize UX</li>
-                  <li>Delivered bi-weekly product demos with 90% user engagement</li>
-                  <li>Boosted satisfaction scores by 20% through interface improvements</li>
                 </ul>
               </div>
             </div>
