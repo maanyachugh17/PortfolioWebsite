@@ -666,6 +666,19 @@ main {
   margin-bottom: 0.25rem;
 }
 
+.timeline-company a {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.timeline-company a:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-accent);
+  transform: translateY(-1px);
+}
+
 .timeline-date {
   display: block;
   font-size: 0.9rem;

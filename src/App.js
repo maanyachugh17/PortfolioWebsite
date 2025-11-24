@@ -64,17 +64,18 @@ function App() {
             <div className="hero-text">
               <span className="hero-greeting">👋 Hello, I'm</span>
               <h1 className="hero-title">Maanya Chugh</h1>
-              <p className="hero-subtitle">Full Stack Developer & AI Engineer</p>
+              <p className="hero-subtitle">Undergraduate Researcher & AI Engineer</p>
               <p className="hero-description">
-                Building end-to-end applications with modern web technologies and AI/ML solutions. 
-                From frontend interfaces to backend systems and intelligent algorithms.
+                Multimodal AI researcher at UT Austin specializing in soundscape-to-image generation. 
+                Building intelligent systems that bridge auditory and visual perceptions for urban planning and environmental monitoring.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
                 <a href="#contact" className="btn-secondary">Let's Connect</a>
+                <a href="https://calendly.com/maanyachugh17/30min" target="_blank" rel="noopener noreferrer" className="btn-secondary">📅 Book a Meeting</a>
               </div>
               <div className="hero-links">
-                <a href="mailto:maanyac17@utexas.edu" className="social-link">📧</a>
+                <a href="mailto:maanyachugh17@gmail.com" className="social-link">📧</a>
                 <a href="https://www.linkedin.com/in/maanya-chugh-53999a222/" target="_blank" rel="noopener noreferrer" className="social-link">💼</a>
                 <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="social-link">💻</a>
                 <a href="https://devpost.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="social-link">🏆</a>
@@ -130,16 +131,16 @@ function App() {
               <div className="education-icon">🎓</div>
               <div className="education-content">
                 <h3>University of Texas at Austin</h3>
-                <p className="education-degree">B.S. in Information Technology, Human-Centered Data Science</p>
-                <p className="education-details">Minor in CS • GPA: 4.0 • Aug 2024 - May 2027</p>
+                <p className="education-degree">Bachelor of Science in Information Technology</p>
+                <p className="education-details">Specializing in Human-Centered Data Science • Minor in Computer Science • GPA: 4.0/4.0 • Aug 2024 - May 2027</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-icon">🌍</div>
               <div className="education-content">
-                <h3>DIS Copenhagen, Denmark</h3>
+                <h3>Danish Institute for Study Abroad - UT Global Ambassador</h3>
                 <p className="education-degree">Study Abroad Program</p>
-                <p className="education-details">Research on tech-driven healthcare solutions • Aug - Dec 2024</p>
+                <p className="education-details">Hands-on research in Scandinavian health systems; proposed tech-driven care solutions • Aug - Dec 2024</p>
               </div>
             </div>
             <div className="education-item">
@@ -161,15 +162,60 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <h3>IT Intern – Internal Audit & Data Analytics</h3>
-                  <span className="timeline-company">Depository Trust Clearing Corporation</span>
-                  <span className="timeline-date">May 2025 - Present</span>
+                  <h3>Undergraduate Researcher – Multimodal AI</h3>
+                  <span className="timeline-company">Soundscape-to-Image Lab – UT Austin</span>
+                  <span className="timeline-date">August 2025 - Present</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Automated manual workflows, reducing departmental processing time by 6%</li>
-                  <li>Developed KNIME Business Hub application for centralized audit processes</li>
-                  <li>Contributed to enterprise-wide AI governance policies and custom AI model development</li>
-                  <li>Gained experience in cross-functional teamwork and agile development</li>
+                  <li>Developed and optimized Python/PyTorch pipelines for audio-to-image generation, improving model accuracy by 10% through algorithmic fine-tuning and evaluation</li>
+                  <li>Automated dataset curation workflows, reducing prep time by 5% and enabling scalable experimentation</li>
+                  <li>Collaborated with cross-disciplinary teams to design multimodal AI applications for urban planning and environmental monitoring</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>AI Agent Builder Intern</h3>
+                  <span className="timeline-company">NeuralSeek - Remote</span>
+                  <span className="timeline-date">August 2025 - September 2025</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Built and deployed a production-ready AI agent using modular architecture, enabling enterprise workflow automation at scale</li>
+                  <li>Conducted competitive analysis of generative AI platforms, influencing product roadmap decisions</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Campus Ambassador</h3>
+                  <span className="timeline-company">Perplexity</span>
+                  <span className="timeline-date">September 2025 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Promoting Perplexity AI tools and features within the campus community</li>
+                  <li>Organizing workshops and events to showcase AI-powered research and productivity tools</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>IT Intern – Internal Audit & Data Analytics</h3>
+                  <span className="timeline-company">Depository Trust Clearing Corporation</span>
+                  <span className="timeline-date">May 2025 - August 2025</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Automated audit test matrix generation in KNIME/Python, saving 10–15 hours per audit and scaling across recurring workflows</li>
+                  <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
+                  <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
                 </ul>
               </div>
             </div>
@@ -199,9 +245,7 @@ function App() {
                   <span className="timeline-date">May - Sep 2023</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Conducted user research and testing to optimize UX</li>
-                  <li>Delivered bi-weekly product demos with 90% user engagement</li>
-                  <li>Boosted satisfaction scores by 20% through interface improvements</li>
+                  <li>Conducted UX research & usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
                 </ul>
               </div>
             </div>
@@ -216,14 +260,50 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <h3>UX Design Fellow</h3>
-                  <span className="timeline-company">Longhorn Developers - UT Austin</span>
-                  <span className="timeline-date">Aug 2024 - Present</span>
+                  <h3>Director</h3>
+                  <span className="timeline-company">
+                    <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
+                      Hook 'Em Hacks - UT Austin
+                    </a>
+                  </span>
+                  <span className="timeline-date">2025 - Present</span>
                 </div>
                 <ul className="timeline-achievements">
+                  <li>Leading a new organization at UT Austin dedicated to organizing hackathons and fostering innovation in the tech community</li>
+                  <li>Planning and executing hackathon events to bring together students, developers, and innovators</li>
+                  <li>Building partnerships with sponsors and coordinating logistics for large-scale tech events</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Designer & UX Design Fellow</h3>
+                  <span className="timeline-company">Longhorn Developers & UX Design Club - UT Registration Plus</span>
+                  <span className="timeline-date">March 2025 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Redesigned core UI in Figma, improving course planning efficiency by 20%</li>
                   <li>Lead UX design initiatives for student-developed applications and platforms</li>
                   <li>Mentor fellow students in user-centered design principles and prototyping</li>
-                  <li>Collaborate with development teams to create intuitive user experiences</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-marker"></div>
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>Co-founder & Advisory Panel Lead</h3>
+                  <span className="timeline-company">Students for Ethical Use of Technology</span>
+                  <span className="timeline-date">December 2024 - Present</span>
+                </div>
+                <ul className="timeline-achievements">
+                  <li>Launched application process and advisory panel for student-led ethical tech initiatives</li>
+                  <li>Promote responsible AI development and ethical technology practices on campus</li>
+                  <li>Organize workshops and discussions on AI ethics and responsible innovation</li>
                 </ul>
               </div>
             </div>
@@ -380,9 +460,8 @@ function App() {
               <div className="skill-grid">
                 <span className="skill-tag">React</span>
                 <span className="skill-tag">Flask</span>
-                <span className="skill-tag">Firebase</span>
+                <span className="skill-tag">PyTorch</span>
                 <span className="skill-tag">Android Studio</span>
-                <span className="skill-tag">Xcode</span>
                 <span className="skill-tag">Git</span>
                 <span className="skill-tag">KNIME</span>
                 <span className="skill-tag">Figma</span>
@@ -403,6 +482,15 @@ function App() {
                 <span className="skill-tag">NumPy</span>
                 <span className="skill-tag">Scikit-learn</span>
                 <span className="skill-tag">TensorFlow</span>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3>Languages</h3>
+              <div className="skill-grid">
+                <span className="skill-tag">English (Fluent)</span>
+                <span className="skill-tag">Hindi (Fluent)</span>
+                <span className="skill-tag">French (Basic)</span>
+                <span className="skill-tag">Danish (Basic)</span>
               </div>
             </div>
           </div>
@@ -442,15 +530,15 @@ function App() {
 
             <div className="project-card">
               <div className="project-header">
-                <h3>Cardiac Risk Classifier</h3>
+                <h3>AI-Driven Cardiac Risk Classifier</h3>
                 <span className="project-tag">ML/Healthcare</span>
               </div>
-              <p>ML pipeline analyzing 10,000+ EHRs to detect cardiac arrhythmias with 85% accuracy using SVMs and decision trees.</p>
+              <p>Built ML pipelines on 10k+ EHRs, training models that reached 85% prediction accuracy for cardiac risk assessment.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>Machine Learning</span>
                 <span>Pandas</span>
-                <span>SVM</span>
+                <span>EHR Analysis</span>
               </div>
             </div>
 
@@ -662,6 +750,36 @@ function App() {
           </div>
         </section>
 
+        {/* Hackathon Wins Section */}
+        <section id="hackathons" className="section glass-card">
+          <h2>Hackathon Wins</h2>
+          <div className="projects-grid">
+            <div className="project-card">
+              <div className="project-header">
+                <h3>1st Place - Data Visualization</h3>
+                <span className="project-tag">South Brunswick Hackathon</span>
+              </div>
+              <p>Led team to victory presenting innovative data insights to Bloomberg engineers.</p>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>1st Place - Best Use of Cryptocurrency</h3>
+                <span className="project-tag">Technica UMD Hackathon</span>
+              </div>
+              <p>Developed creative blockchain solution earning top honors for innovation.</p>
+            </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>Best Hack for Social Good</h3>
+                <span className="project-tag">Bridgewater Raritan Hacks</span>
+              </div>
+              <p>Created impactful solution addressing social challenges in the community.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Awards Section */}
         <section id="awards" className="section glass-card">
           <h2>Awards & Recognition</h2>
@@ -728,7 +846,7 @@ function App() {
               <div className="contact-items">
                 <div className="contact-item">
                   <span className="contact-icon">📧</span>
-                  <a href="mailto:maanyac17@utexas.edu">maanyac17@utexas.edu</a>
+                  <a href="mailto:maanyachugh17@gmail.com">maanyachugh17@gmail.com</a>
                 </div>
                 <div className="contact-item">
                   <span className="contact-icon">📱</span>
@@ -737,6 +855,10 @@ function App() {
                 <div className="contact-item">
                   <span className="contact-icon">📍</span>
                   <span>New Jersey / Texas</span>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">📅</span>
+                  <a href="https://calendly.com/maanyachugh17/30min" target="_blank" rel="noopener noreferrer">Book a Meeting</a>
                 </div>
               </div>
             </div>
