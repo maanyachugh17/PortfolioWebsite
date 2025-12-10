@@ -6,8 +6,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [showMoreProjects, setShowMoreProjects] = useState(false);
   const [showMoreLeadership, setShowMoreLeadership] = useState(false);
+  const [showMoreExperience, setShowMoreExperience] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,7 +97,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I'm a UT Austin student pursuing a BSI in Information Technology with a focus on Data Science. Currently contributing as an undergraduate student researcher exploring multimodal agentic AI in geospacial applications as well as contributing to startups in the AI space. I love collaborating on projects that make a difference, and I'm always eager to learn, create, and connect with others who share my drive for positive change.
+                UT Austin BSI (Information Technology, Data Science focus). I build multimodal AI for geospatial use cases and support early-stage AI startups. I like fast teams, measurable impact, and clear, human-centered products.
               </p>
             </div>
             <div className="about-stats">
@@ -198,51 +198,60 @@ function App() {
               </div>
             </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>IT Intern – Internal Audit & Data Analytics</h3>
-                  <span className="timeline-company">Depository Trust Clearing Corporation</span>
-                  <span className="timeline-date">May 2025 - August 2025</span>
+            {showMoreExperience && (
+              <>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>IT Intern – Internal Audit & Data Analytics</h3>
+                      <span className="timeline-company">Depository Trust Clearing Corporation</span>
+                      <span className="timeline-date">May 2025 - August 2025</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Automated audit test matrix generation in KNIME/Python, saving 10–15 hours per audit and scaling across recurring workflows</li>
+                      <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
+                      <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Automated audit test matrix generation in KNIME/Python, saving 10–15 hours per audit and scaling across recurring workflows</li>
-                  <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
-                  <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Technology Developer & Outreach Coordinator</h3>
-                  <span className="timeline-company">A Sustainable Future</span>
-                  <span className="timeline-date">Oct 2022 - May 2024</span>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Technology Developer & Outreach Coordinator</h3>
+                      <span className="timeline-company">A Sustainable Future</span>
+                      <span className="timeline-date">Oct 2022 - May 2024</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Leveraged data modeling to optimize waste management for 10 educational institutions</li>
+                      <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
+                      <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Leveraged data modeling to optimize waste management for 10 educational institutions</li>
-                  <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
-                  <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Product & Tech Intern</h3>
-                  <span className="timeline-company">Jetson Financial</span>
-                  <span className="timeline-date">May - Sep 2023</span>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Product & Tech Intern</h3>
+                      <span className="timeline-company">Jetson Financial</span>
+                      <span className="timeline-date">May - Sep 2023</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Conducted UX research & usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Conducted UX research & usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
-                </ul>
-              </div>
-            </div>
+              </>
+            )}
+          </div>
+          <div className="cta-row">
+            <button className="btn-secondary" onClick={() => setShowMoreExperience(!showMoreExperience)}>
+              {showMoreExperience ? 'See fewer' : 'See more'}
+            </button>
           </div>
         </section>
 
@@ -290,52 +299,68 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <h3>Co-founder & Advisory Panel Lead</h3>
-                  <span className="timeline-company">Students for Ethical Use of Technology</span>
-                  <span className="timeline-date">December 2024 - Present</span>
+                  <h3>Designer & UX Design Fellow</h3>
+                  <span className="timeline-company">Longhorn Developers & UX Design Club - UT Registration Plus</span>
+                  <span className="timeline-date">March 2025 - Present</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Launched application process and advisory panel for student-led ethical tech initiatives</li>
-                  <li>Promote responsible AI development and ethical technology practices on campus</li>
-                  <li>Organize workshops and discussions on AI ethics and responsible innovation</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Community Engagement Agency Member</h3>
-                  <span className="timeline-company">Student Government - UT Austin</span>
-                  <span className="timeline-date">Aug 2024 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Represent student interests and advocate for community needs at university level</li>
-                  <li>Organize campus-wide events and initiatives to foster student engagement</li>
-                  <li>Collaborate with administration to implement student-driven policy changes</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Texas Global Ambassador</h3>
-                  <span className="timeline-company">Texas Global - UT Austin</span>
-                  <span className="timeline-date">Aug 2024 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Represent UT Austin at international events and promote global engagement</li>
-                  <li>Assist international students with cultural integration and campus resources</li>
-                  <li>Organize cross-cultural events and international student orientation programs</li>
+                  <li>Redesigned core UI in Figma, improving course planning efficiency by 20%</li>
+                  <li>Lead UX design initiatives for student-developed applications and platforms</li>
+                  <li>Mentor fellow students in user-centered design principles and prototyping</li>
                 </ul>
               </div>
             </div>
 
             {showMoreLeadership && (
               <>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Co-founder & Advisory Panel Lead</h3>
+                      <span className="timeline-company">Students for Ethical Use of Technology</span>
+                      <span className="timeline-date">December 2024 - Present</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Launched application process and advisory panel for student-led ethical tech initiatives</li>
+                      <li>Promote responsible AI development and ethical technology practices on campus</li>
+                      <li>Organize workshops and discussions on AI ethics and responsible innovation</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Community Engagement Agency Member</h3>
+                      <span className="timeline-company">Student Government - UT Austin</span>
+                      <span className="timeline-date">Aug 2024 - Present</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Represent student interests and advocate for community needs at university level</li>
+                      <li>Organize campus-wide events and initiatives to foster student engagement</li>
+                      <li>Collaborate with administration to implement student-driven policy changes</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Texas Global Ambassador</h3>
+                      <span className="timeline-company">Texas Global - UT Austin</span>
+                      <span className="timeline-date">Aug 2024 - Present</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Represent UT Austin at international events and promote global engagement</li>
+                      <li>Assist international students with cultural integration and campus resources</li>
+                      <li>Organize cross-cultural events and international student orientation programs</li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div className="timeline-item">
                   <div className="timeline-marker"></div>
                   <div className="timeline-content">
@@ -525,39 +550,30 @@ function App() {
               </div>
             </div>
 
-            {showMoreProjects && (
-              <>
-                <div className="project-card">
-                  <div className="project-header">
-                    <h3>SmartRecruit AI</h3>
-                    <span className="project-tag">AI/HR Tech</span>
-                  </div>
-                  <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
-                  <div className="project-tech">
-                    <span>Python</span>
-                    <span>NLP</span>
-                    <span>Machine Learning</span>
-                    <span>FastAPI</span>
-                  </div>
-                </div>
+            <div className="project-card">
+              <div className="project-header">
+                <h3>SmartRecruit AI</h3>
+                <span className="project-tag">AI/HR Tech</span>
+              </div>
+              <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Machine Learning</span>
+                <span>FastAPI</span>
+              </div>
+            </div>
 
-                <div className="project-card">
-                  <div className="project-header">
-                    <h3>More on GitHub</h3>
-                    <span className="project-tag">Portfolio</span>
-                  </div>
-                  <p>See additional builds, prototypes, and hackathon projects.</p>
-                  <div className="project-tech">
-                    <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-          <div className="cta-row">
-            <button className="btn-secondary" onClick={() => setShowMoreProjects(!showMoreProjects)}>
-              {showMoreProjects ? 'See fewer projects' : 'See more projects'}
-            </button>
+            <div className="project-card">
+              <div className="project-header">
+                <h3>More on GitHub</h3>
+                <span className="project-tag">Portfolio</span>
+              </div>
+              <p>See additional builds, prototypes, and hackathon projects.</p>
+              <div className="project-tech">
+                <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
+              </div>
+            </div>
           </div>
         </section>
 

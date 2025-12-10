@@ -21,21 +21,21 @@
 }
 
 .dark-mode {
-  /* Dark mode colors - city night theme */
-  --bg-primary: linear-gradient(145deg, #0b1224 0%, #101b33 35%, #13203d 65%, #0d152b 100%);
-  --bg-secondary: rgba(18, 27, 48, 0.92);
-  --bg-glass: rgba(26, 38, 64, 0.75);
-  --bg-card: rgba(22, 32, 55, 0.88);
-  --text-primary: #e9eef7;
-  --text-secondary: #d2d9e8;
-  --text-accent: #7dd3fc;
-  --border-color: rgba(125, 211, 252, 0.25);
-  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.65);
-  --shadow-heavy: 0 30px 90px rgba(0, 0, 0, 0.75);
-  --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #4f46e5 100%);
-  --gradient-secondary: linear-gradient(135deg, #22d3ee 0%, #0ea5e9 100%);
-  --gradient-accent: linear-gradient(135deg, #f97316 0%, #fb7185 100%);
+  /* Dark mode colors - brighter city night theme */
+  --bg-primary: linear-gradient(145deg, #111827 0%, #18233a 35%, #1f2e4a 65%, #121a2f 100%);
+  --bg-secondary: rgba(26, 35, 58, 0.9);
+  --bg-glass: rgba(38, 51, 80, 0.78);
+  --bg-card: rgba(30, 41, 64, 0.9);
+  --text-primary: #f5f7fb;
+  --text-secondary: #e2e8f0;
+  --text-accent: #8bd3ff;
+  --border-color: rgba(139, 211, 255, 0.35);
+  --shadow-light: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --shadow-heavy: 0 30px 90px rgba(0, 0, 0, 0.65);
+  --gradient-primary: linear-gradient(135deg, #8bd3ff 0%, #60a5fa 45%, #6366f1 100%);
+  --gradient-secondary: linear-gradient(135deg, #22d3ee 0%, #38bdf8 100%);
+  --gradient-accent: linear-gradient(135deg, #fb923c 0%, #fb7185 100%);
 }
 
 /* Reset and base styles */
