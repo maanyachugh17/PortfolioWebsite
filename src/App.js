@@ -1,5 +1,5 @@
 import './App.css';
-import profilePic from './profile.jpg';
+import profilePic from './pfp.jpeg';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -72,7 +72,6 @@ function App() {
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
                 <a href="#contact" className="btn-secondary">Let's Connect</a>
-                <a href="https://calendly.com/maanyachugh17/30min" target="_blank" rel="noopener noreferrer" className="btn-secondary">📅 Book a Meeting</a>
               </div>
               <div className="hero-links">
                 <a href="mailto:maanyachugh17@gmail.com" className="social-link">📧</a>
@@ -96,14 +95,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I'm a passionate technologist and Informatics student at UT Austin, blending software engineering, 
-                data science, and a commitment to ethical, human-centered technology. Whether I'm building AI tools 
-                to improve healthcare, designing engaging games, or leading student initiatives for responsible tech, 
-                I thrive at the intersection of innovation and impact.
-              </p>
-              <p>
-                I love collaborating on projects that make a difference, and I'm always eager to learn, create, 
-                and connect with others who share my drive for positive change.
+                I'm a UT Austin student pursuing a BSI in Information Technology with a focus on Data Science. Currently contributing as an undergraduate student researcher exploring multimodal agentic AI in geospacial applications as well as contributing to startups in the AI space. I love collaborating on projects that make a difference, and I'm always eager to learn, create, and connect with others who share my drive for positive change.
               </p>
             </div>
             <div className="about-stats">
