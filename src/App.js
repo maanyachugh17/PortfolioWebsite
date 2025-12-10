@@ -155,7 +155,7 @@ function App() {
               <div className="timeline-content">
                 <div className="timeline-header">
                   <h3>Undergraduate Researcher – Multimodal AI</h3>
-                  <span className="timeline-company">Soundscape-to-Image Lab – UT Austin</span>
+                  <span className="timeline-company">SounDIT – GiSense Lab – UT Austin</span>
                   <span className="timeline-date">August 2025 - Present</span>
                 </div>
                 <ul className="timeline-achievements">
@@ -216,14 +216,14 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <h3>Voter Engagement Intern</h3>
-                  <span className="timeline-company">Zwicker, Freiman, & Drulis Political Campaign</span>
-                  <span className="timeline-date">May 2023 - Oct 2024</span>
+                  <h3>Technology Developer & Outreach Coordinator</h3>
+                  <span className="timeline-company">A Sustainable Future</span>
+                  <span className="timeline-date">Oct 2022 - May 2024</span>
                 </div>
                 <ul className="timeline-achievements">
-                  <li>Coordinated voting drive engaging 500+ voters, increasing turnout by 8%</li>
-                  <li>Organized campaign events for underrepresented groups</li>
-                  <li>Developed digital content and managed social media outreach</li>
+                  <li>Leveraged data modeling to optimize waste management for 10 educational institutions</li>
+                  <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
+                  <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
                 </ul>
               </div>
             </div>
@@ -304,22 +304,6 @@ function App() {
               <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <div className="timeline-header">
-                  <h3>Operations Strategist</h3>
-                  <span className="timeline-company">Kupid Dating - UT Austin</span>
-                  <span className="timeline-date">Aug 2024 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Develop and implement strategic initiatives to enhance user engagement and platform growth</li>
-                  <li>Analyze user data and market trends to optimize dating app operations</li>
-                  <li>Coordinate cross-functional teams to improve user experience and retention</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
                   <h3>Community Engagement Agency Member</h3>
                   <span className="timeline-company">Student Government - UT Austin</span>
                   <span className="timeline-date">Aug 2024 - Present</span>
@@ -344,38 +328,6 @@ function App() {
                   <li>Represent UT Austin at international events and promote global engagement</li>
                   <li>Assist international students with cultural integration and campus resources</li>
                   <li>Organize cross-cultural events and international student orientation programs</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Active Member</h3>
-                  <span className="timeline-company">Indian Cultural Association & Type Texas - UT Austin</span>
-                  <span className="timeline-date">Aug 2024 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Participate in cultural events and promote diversity on campus</li>
-                  <li>Contribute to typography and design community through Type Texas</li>
-                  <li>Foster inclusive environment and cultural exchange among students</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Technology Developer & Outreach Coordinator</h3>
-                  <span className="timeline-company">A Sustainable Future</span>
-                  <span className="timeline-date">Oct 2022 - May 2024</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Leveraged advanced data modeling to optimize waste management for 10 educational institutions</li>
-                  <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
-                  <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
                 </ul>
               </div>
             </div>
@@ -511,7 +463,7 @@ function App() {
                 <h3>SymptomSync</h3>
                 <span className="project-tag">AI/Healthcare</span>
               </div>
-              <p>Clinical NLP Triage Assistant leveraging HuggingFace Transformers and PyTorch for symptom extraction and diagnosis inference.</p>
+              <p>Clinical NLP triage assistant using HF Transformers + PyTorch for symptom extraction and diagnosis inference.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>NLP</span>
@@ -525,7 +477,7 @@ function App() {
                 <h3>AI-Driven Cardiac Risk Classifier</h3>
                 <span className="project-tag">ML/Healthcare</span>
               </div>
-              <p>Built ML pipelines on 10k+ EHRs, training models that reached 85% prediction accuracy for cardiac risk assessment.</p>
+              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>Machine Learning</span>
@@ -536,62 +488,10 @@ function App() {
 
             <div className="project-card">
               <div className="project-header">
-                <h3>SpaceShooter Game</h3>
-                <span className="project-tag">Game Dev</span>
-              </div>
-              <p>Fast-paced arcade game with engaging gameplay mechanics, collision detection, and scoring system.</p>
-              <div className="project-tech">
-                <span>Unity</span>
-                <span>C#</span>
-                <span>Game Design</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>GPS Tracker App</h3>
-                <span className="project-tag">Mobile Dev</span>
-              </div>
-              <p>Real-time location tracking mobile app with clean UI and robust location services integration.</p>
-              <div className="project-tech">
-                <span>Java</span>
-                <span>Android Studio</span>
-                <span>GPS</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>Weather App</h3>
-                <span className="project-tag">Mobile Dev</span>
-              </div>
-              <p>Mobile weather application providing detailed forecasts with user-friendly, visually appealing interface.</p>
-              <div className="project-tech">
-                <span>Mobile Dev</span>
-                <span>API Integration</span>
-                <span>UI/UX</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>Text Message App</h3>
-                <span className="project-tag">Mobile Dev</span>
-              </div>
-              <p>Cross-platform messaging app with auto-generated responses and seamless user experience.</p>
-              <div className="project-tech">
-                <span>Java</span>
-                <span>Mobile Dev</span>
-                <span>UX Design</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
                 <h3>QuantFin Analytics</h3>
                 <span className="project-tag">Quantitative Finance</span>
               </div>
-              <p>Comprehensive financial analysis platform with ML-powered price prediction, risk management, and interactive dashboards. Achieved 85% accuracy in stock direction prediction and 23% risk reduction through portfolio optimization.</p>
+              <p>ML-powered price prediction and risk dashboards; 85% accuracy in stock direction and 23% risk reduction.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>Machine Learning</span>
@@ -602,24 +502,10 @@ function App() {
 
             <div className="project-card">
               <div className="project-header">
-                <h3>MediAI Assistant</h3>
-                <span className="project-tag">AI/Healthcare</span>
-              </div>
-              <p>AI-powered medical diagnosis assistant using computer vision and NLP. Processes medical images and patient symptoms to provide preliminary diagnoses with 92% accuracy. Integrated with hospital EHR systems.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>TensorFlow</span>
-                <span>Computer Vision</span>
-                <span>NLP</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
                 <h3>EcoTrack Platform</h3>
                 <span className="project-tag">Full Stack/ML</span>
               </div>
-              <p>Environmental monitoring platform combining IoT sensors, ML predictions, and real-time analytics. Tracks air quality, predicts pollution levels, and provides actionable insights for 10+ cities. 25% improvement in prediction accuracy.</p>
+              <p>IoT + ML monitoring for air quality; improved pollution forecasting accuracy by 25% across 10+ cities.</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>Node.js</span>
@@ -633,7 +519,7 @@ function App() {
                 <h3>SmartRecruit AI</h3>
                 <span className="project-tag">AI/HR Tech</span>
               </div>
-              <p>Intelligent recruitment platform using NLP and ML to match candidates with job requirements. Reduces hiring time by 40% and improves candidate-job fit by 30%. Processes 500+ resumes daily.</p>
+              <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>NLP</span>
@@ -644,99 +530,12 @@ function App() {
 
             <div className="project-card">
               <div className="project-header">
-                <h3>CryptoVault Exchange</h3>
-                <span className="project-tag">Blockchain/Finance</span>
+                <h3>More on GitHub</h3>
+                <span className="project-tag">Portfolio</span>
               </div>
-              <p>Secure cryptocurrency exchange platform with real-time trading, portfolio management, and advanced security features. Handles $50K+ daily trading volume with 99.5% uptime and zero security breaches.</p>
+              <p>See additional builds, prototypes, and hackathon projects.</p>
               <div className="project-tech">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Blockchain</span>
-                <span>Web3</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>DataViz Studio</h3>
-                <span className="project-tag">Data Science</span>
-              </div>
-              <p>Interactive data visualization platform for business intelligence. Features real-time dashboards, predictive analytics, and automated reporting. Used by 25+ companies for data-driven decision making.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>D3.js</span>
-                <span>Tableau</span>
-                <span>SQL</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>VoiceFlow Assistant</h3>
-                <span className="project-tag">AI/NLP</span>
-              </div>
-              <p>Voice-controlled AI assistant with natural language processing and multi-language support. Integrates with smart home devices and provides personalized responses. 85% accuracy in voice recognition.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>Speech Recognition</span>
-                <span>NLP</span>
-                <span>IoT</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>SecureChat Pro</h3>
-                <span className="project-tag">Cybersecurity</span>
-              </div>
-              <p>End-to-end encrypted messaging platform with advanced security features including biometric authentication, message self-destruct, and secure file sharing. 5,000+ active users with military-grade encryption.</p>
-              <div className="project-tech">
-                <span>React Native</span>
-                <span>Node.js</span>
-                <span>Cryptography</span>
-                <span>WebRTC</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>Mindful Moments Podcast</h3>
-                <span className="project-tag">Mental Health/Tech</span>
-              </div>
-              <p>Mental health podcast for teens with 150+ Instagram followers. Created content strategy, managed social media, and built community around teen mental health awareness. Featured guest speakers and expert interviews.</p>
-              <div className="project-tech">
-                <span>Content Creation</span>
-                <span>Social Media</span>
-                <span>Community Building</span>
-                <span>Mental Health</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>TechGirls STEM Platform</h3>
-                <span className="project-tag">Education/Tech</span>
-              </div>
-              <p>Developed coding curriculum and taught STEM workshops to 50+ girls. Wrote AI ethics blogs reaching 500+ subscribers. Led executive board initiatives to increase female representation in tech.</p>
-              <div className="project-tech">
-                <span>Curriculum Design</span>
-                <span>STEM Education</span>
-                <span>Content Writing</span>
-                <span>Leadership</span>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-header">
-                <h3>VEX Robotics Strategy System</h3>
-                <span className="project-tag">Robotics/Engineering</span>
-              </div>
-              <p>Led robotics team to consecutive state qualifications and nationals invite. Built robot expansion, devised match strategies, and earned Innovate & Design Award competing against 50+ teams.</p>
-              <div className="project-tech">
-                <span>Robotics</span>
-                <span>Engineering</span>
-                <span>Strategy</span>
-                <span>Team Leadership</span>
+                <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
               </div>
             </div>
           </div>
