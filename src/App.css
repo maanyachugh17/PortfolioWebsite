@@ -325,7 +325,16 @@ main {
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 2rem;
+  max-width: 720px;
   animation: slideInLeft 0.8s ease-out 0.8s both;
+}
+
+.dark-mode .hero-greeting {
+  color: #e2e8f0;
+}
+
+.dark-mode .hero-description {
+  color: #e2e8f0;
 }
 
 .hero-cta {
@@ -447,6 +456,7 @@ main {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: 90px;
 }
 
 .glass-card {
