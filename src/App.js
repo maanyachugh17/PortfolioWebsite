@@ -6,6 +6,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [showMoreProjects, setShowMoreProjects] = useState(false);
+  const [showMoreLeadership, setShowMoreLeadership] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -332,53 +334,62 @@ function App() {
               </div>
             </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Youth Ambassador Team Lead</h3>
-                  <span className="timeline-company">Juvenile Diabetes Research Foundation (JDRF)</span>
-                  <span className="timeline-date">2018 - 2024</span>
+            {showMoreLeadership && (
+              <>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Youth Ambassador Team Lead</h3>
+                      <span className="timeline-company">Juvenile Diabetes Research Foundation (JDRF)</span>
+                      <span className="timeline-date">2018 - 2024</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Led 30+ fundraisers raising $50k+ for T1D research over 6 years</li>
+                      <li>Advocated for insulin bill and managed social media campaigns</li>
+                      <li>Directed ambassador program and coordinated community outreach</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Led 30+ fundraisers raising $50k+ for T1D research over 6 years</li>
-                  <li>Advocated for insulin bill and managed social media campaigns</li>
-                  <li>Directed ambassador program and coordinated community outreach</li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>NJ Political Director & Co-founder</h3>
-                  <span className="timeline-company">High School Democrats of America</span>
-                  <span className="timeline-date">2021 - 2024</span>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>NJ Political Director & Co-founder</h3>
+                      <span className="timeline-company">High School Democrats of America</span>
+                      <span className="timeline-date">2021 - 2024</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Led voting campaigns and coordinated events among 15+ schools</li>
+                      <li>Organized pro-choice rally with 400+ students</li>
+                      <li>Lobbied for sexual assault prevention bill at state level</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Led voting campaigns and coordinated events among 15+ schools</li>
-                  <li>Organized pro-choice rally with 400+ students</li>
-                  <li>Lobbied for sexual assault prevention bill at state level</li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Code Ninjas Teacher/Sensei</h3>
-                  <span className="timeline-company">Code Ninjas</span>
-                  <span className="timeline-date">2019 - 2022</span>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Code Ninjas Teacher/Sensei</h3>
+                      <span className="timeline-company">Code Ninjas</span>
+                      <span className="timeline-date">2019 - 2022</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Mentored 100+ young coders (ages 8-14) in programming fundamentals</li>
+                      <li>Oversaw 20+ game development projects using Unity and C#</li>
+                      <li>Taught block coding, Java, and advanced programming concepts</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="timeline-achievements">
-                  <li>Mentored 100+ young coders (ages 8-14) in programming fundamentals</li>
-                  <li>Oversaw 20+ game development projects using Unity and C#</li>
-                  <li>Taught block coding, Java, and advanced programming concepts</li>
-                </ul>
-              </div>
-            </div>
+              </>
+            )}
+          </div>
+          <div className="cta-row">
+            <button className="btn-secondary" onClick={() => setShowMoreLeadership(!showMoreLeadership)}>
+              {showMoreLeadership ? 'See fewer' : 'See more'}
+            </button>
           </div>
         </section>
 
@@ -514,30 +525,39 @@ function App() {
               </div>
             </div>
 
-            <div className="project-card">
-              <div className="project-header">
-                <h3>SmartRecruit AI</h3>
-                <span className="project-tag">AI/HR Tech</span>
-              </div>
-              <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>NLP</span>
-                <span>Machine Learning</span>
-                <span>FastAPI</span>
-              </div>
-            </div>
+            {showMoreProjects && (
+              <>
+                <div className="project-card">
+                  <div className="project-header">
+                    <h3>SmartRecruit AI</h3>
+                    <span className="project-tag">AI/HR Tech</span>
+                  </div>
+                  <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
+                  <div className="project-tech">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>Machine Learning</span>
+                    <span>FastAPI</span>
+                  </div>
+                </div>
 
-            <div className="project-card">
-              <div className="project-header">
-                <h3>More on GitHub</h3>
-                <span className="project-tag">Portfolio</span>
-              </div>
-              <p>See additional builds, prototypes, and hackathon projects.</p>
-              <div className="project-tech">
-                <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
-              </div>
-            </div>
+                <div className="project-card">
+                  <div className="project-header">
+                    <h3>More on GitHub</h3>
+                    <span className="project-tag">Portfolio</span>
+                  </div>
+                  <p>See additional builds, prototypes, and hackathon projects.</p>
+                  <div className="project-tech">
+                    <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="cta-row">
+            <button className="btn-secondary" onClick={() => setShowMoreProjects(!showMoreProjects)}>
+              {showMoreProjects ? 'See fewer projects' : 'See more projects'}
+            </button>
           </div>
         </section>
 
@@ -587,20 +607,6 @@ function App() {
               <div className="award-content">
                 <h3>NCWIT Aspirations in Computer Science Award</h3>
                 <p>National recognition for outstanding achievement and leadership in computer science</p>
-              </div>
-            </div>
-            <div className="award-item">
-              <div className="award-icon">📊</div>
-              <div className="award-content">
-                <h3>1st Place in Data Visualization @ SB Hackathon</h3>
-                <p>Led team to victory presenting innovative data insights to Bloomberg engineers</p>
-              </div>
-            </div>
-            <div className="award-item">
-              <div className="award-icon">💰</div>
-              <div className="award-content">
-                <h3>1st Place Technica Hackathon: Best Use of Cryptocurrency</h3>
-                <p>Developed creative blockchain solution earning top honors for innovation</p>
               </div>
             </div>
             <div className="award-item">
