@@ -97,7 +97,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                UT Austin BSI (Information Technology, Data Science focus). I build multimodal AI for geospatial use cases and support early-stage AI startups. I like fast teams, measurable impact, and clear, human-centered products.
+                UT Austin BSI (Info Tech, Data Science). I build multimodal AI for geospatial use cases, support early-stage AI startups, and focus on fast, measurable impact with human-centered products.
               </p>
             </div>
             <div className="about-stats">
@@ -183,23 +183,23 @@ function App() {
               </div>
             </div>
 
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Campus Ambassador</h3>
-                  <span className="timeline-company">Perplexity</span>
-                  <span className="timeline-date">September 2025 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Promoting Perplexity AI tools and features within the campus community</li>
-                  <li>Organizing workshops and events to showcase AI-powered research and productivity tools</li>
-                </ul>
-              </div>
-            </div>
-
             {showMoreExperience && (
               <>
+                <div className="timeline-item">
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <div className="timeline-header">
+                      <h3>Campus Ambassador</h3>
+                      <span className="timeline-company">Perplexity</span>
+                      <span className="timeline-date">September 2025 - Present</span>
+                    </div>
+                    <ul className="timeline-achievements">
+                      <li>Promoting Perplexity AI tools and features within the campus community</li>
+                      <li>Organizing workshops and events to showcase AI-powered research and productivity tools</li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div className="timeline-item">
                   <div className="timeline-marker"></div>
                   <div className="timeline-content">
@@ -275,22 +275,6 @@ function App() {
                   <li>Leading a new organization at UT Austin dedicated to organizing hackathons and fostering innovation in the tech community</li>
                   <li>Planning and executing hackathon events to bring together students, developers, and innovators</li>
                   <li>Building partnerships with sponsors and coordinating logistics for large-scale tech events</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>Designer & UX Design Fellow</h3>
-                  <span className="timeline-company">Longhorn Developers & UX Design Club - UT Registration Plus</span>
-                  <span className="timeline-date">March 2025 - Present</span>
-                </div>
-                <ul className="timeline-achievements">
-                  <li>Redesigned core UI in Figma, improving course planning efficiency by 20%</li>
-                  <li>Lead UX design initiatives for student-developed applications and platforms</li>
-                  <li>Mentor fellow students in user-centered design principles and prototyping</li>
                 </ul>
               </div>
             </div>
