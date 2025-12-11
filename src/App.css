@@ -508,10 +508,15 @@ main {
 }
 
 /* About section */
+#about.glass-card {
+  max-width: 920px;
+  padding: 2rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -519,17 +524,17 @@ main {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .about-stats {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .stat-item {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.1rem;
   background: var(--bg-glass);
   border-radius: 16px;
   backdrop-filter: blur(10px);
