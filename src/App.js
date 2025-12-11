@@ -1,6 +1,7 @@
 import './App.css';
 import profilePic from './pfp.jpeg';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -709,11 +710,8 @@ function App() {
       </main>
 
       {/* Research Map Modal */}
-      {showResearchMap && (
-        <div className="research-modal-overlay" onClick={() => {
-          console.log('Modal overlay clicked');
-          setShowResearchMap(false);
-        }}>
+      {showResearchMap && createPortal(
+        <div className="research-modal-overlay" onClick={() => setShowResearchMap(false)}>
           <div className="research-modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="research-modal-header">
               <h2>Research Map: Ethical and Environmental Governance of Space Commercialization</h2>
@@ -747,7 +745,8 @@ function App() {
               ))}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Scroll to top button */}
