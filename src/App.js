@@ -8,6 +8,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [showMoreExperience, setShowMoreExperience] = useState(false);
+  const [showResearchMap, setShowResearchMap] = useState(false);
+  const [expandedPhase, setExpandedPhase] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -548,6 +550,19 @@ function App() {
               </div>
             </div>
 
+            <div className="project-card" style={{ cursor: 'pointer' }} onClick={() => setShowResearchMap(true)}>
+              <div className="project-header">
+                <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
+                <span className="project-tag">Research</span>
+              </div>
+              <p>Interactive research timeline exploring environmental and ethical governance frameworks for commercial space activity.</p>
+              <div className="project-tech">
+                <span>Research</span>
+                <span>Policy Analysis</span>
+                <span>Mixed Methods</span>
+              </div>
+            </div>
+
             <div className="project-card">
               <div className="project-header">
                 <h3>More on GitHub</h3>
@@ -682,6 +697,45 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* Research Map Modal */}
+      {showResearchMap && (
+        <div className="research-modal-overlay" onClick={() => setShowResearchMap(false)}>
+          <div className="research-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="research-modal-header">
+              <h2>Research Map: Ethical and Environmental Governance of Space Commercialization</h2>
+              <button className="research-modal-close" onClick={() => setShowResearchMap(false)}>×</button>
+            </div>
+            <div className="research-timeline">
+              {[
+                { id: 1, title: 'Research Problem', icon: '🔍', content: 'The commercialization of space has rapidly shifted from government-led missions to privately dominated activity, raising environmental and ethical concerns. Companies such as SpaceX and Blue Origin present their missions as progress, yet research shows that orbital debris, satellite congestion, and unregulated resource extraction pose growing risks. Without enforceable governance structures, space could become another domain where short-term profit undermines long-term sustainability. This problem affects everyone, from scientists and policymakers to the general public who depend on satellite infrastructure. Decisions made now will shape whether outer space becomes a shared global commons or a site of exploitation.' },
+                { id: 2, title: 'Literature Review & Gap', icon: '📚', content: 'Existing research identifies key patterns: orbital debris behaves like an ecological commons, asteroid mining could support sustainability with strict regulation, and governance proposals exist but lack enforcement. Scholars highlight environmental capacity limits, ethical obligations to future generations, and the risk of unequal resource control. However, the field lacks empirical studies identifying which environmental metrics, monitoring tools, and benefit-sharing mechanisms are considered feasible or legitimate by experts. This gap matters because without empirical grounding, international space governance remains theoretical rather than actionable.' },
+                { id: 3, title: 'Research Questions', icon: '❓', content: 'RQ1: What environmental metrics do space-policy experts identify as necessary for defining sustainable orbital activity?\n\nRQ2: How do experts evaluate the feasibility of different monitoring tools for enforcing environmental limits in orbit?\n\nRQ3: Which benefit-sharing or compliance mechanisms are seen as equitable and politically viable for asteroid-mining governance?\n\nThese are explanatory questions because they seek to uncover mechanisms and reasoning behind governance preferences and feasibility.' },
+                { id: 4, title: 'Methodology', icon: '🔬', content: 'This study uses a mixed-methods approach, combining qualitative interviews with quantitative analysis of orbital-debris datasets and policy documents. Mixed methods allow me to integrate expert judgment with measurable environmental patterns, which is necessary for connecting ethical principles to practical governance mechanisms.' },
+                { id: 5, title: 'Data Collection', icon: '📊', content: 'Participants include policymakers, researchers, and industry professionals with at least three years of experience in space governance or sustainability. Recruitment will occur through professional networks, email outreach, and academic/industry conferences. Qualitative data will come from semi-structured interviews conducted on Zoom, while quantitative data will be drawn from NASA orbital debris reports, UNOOSA registries, and Space-Track datasets. Interviews will explore expert views on environmental metrics, monitoring feasibility, and governance mechanisms.' },
+                { id: 6, title: 'Data Analysis', icon: '📈', content: 'Interview transcripts will be coded thematically using NVivo to identify shared reasoning patterns, definitions of sustainability, and feasibility assessments. Quantitative analysis in Python will summarize launch trends, debris growth, and regulatory adoption. These two data streams will be integrated through mixed-methods triangulation to develop a grounded model of sustainable space governance.' },
+                { id: 7, title: 'Ethics', icon: '⚖️', content: 'The study applies the principles of Respect for Persons, Beneficence, and Justice. Participation is voluntary and fully consented, interview data is anonymized upon request, and all files are stored securely. Justice is addressed by ensuring representation from both spacefaring and non-spacefaring perspectives. Because governance research involves expert professionals, questions are designed to minimize burden and avoid sensitive proprietary information.' },
+                { id: 8, title: 'Impact', icon: '🌍', content: 'This research contributes new knowledge on how ethical and environmental principles can be transformed into enforceable governance tools for commercial space activity. The findings will help international agencies, policymakers, NGOs, and private firms design sustainable standards for orbital operations and asteroid mining. Results will be disseminated through academic publications, policy briefs, and presentations to organizations such as the UN Office for Outer Space Affairs. Ultimately, this work aims to support a future in which space is governed responsibly as a shared environment, a global commons, and a domain shaped by ethical foresight rather than unchecked exploitation.' }
+              ].map((phase) => (
+                <div key={phase.id} className={`research-timeline-item ${expandedPhase === phase.id ? 'expanded' : ''}`}>
+                  <div className="research-timeline-marker" onClick={() => setExpandedPhase(expandedPhase === phase.id ? null : phase.id)}>
+                    <div className="research-timeline-icon">{phase.icon}</div>
+                    <div className="research-timeline-line"></div>
+                  </div>
+                  <div className="research-timeline-content">
+                    <h3 onClick={() => setExpandedPhase(expandedPhase === phase.id ? null : phase.id)}>{phase.title}</h3>
+                    {expandedPhase === phase.id && (
+                      <div className="research-timeline-details">
+                        <p>{phase.content}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Scroll to top button */}
       <button 
