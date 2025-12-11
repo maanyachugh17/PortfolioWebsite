@@ -550,7 +550,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project-card" style={{ cursor: 'pointer' }} onClick={() => setShowResearchMap(true)}>
+            <div className="project-card research-map-card" style={{ cursor: 'pointer' }} onClick={() => setShowResearchMap(true)}>
               <div className="project-header">
                 <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
                 <span className="project-tag">Research</span>
@@ -563,16 +563,11 @@ function App() {
               </div>
             </div>
 
-            <div className="project-card">
-              <div className="project-header">
-                <h3>More on GitHub</h3>
-                <span className="project-tag">Portfolio</span>
-              </div>
-              <p>See additional builds, prototypes, and hackathon projects.</p>
-              <div className="project-tech">
-                <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ textDecoration: 'none', padding: '0.4rem 0.8rem', borderRadius: '12px' }}>View GitHub</a>
-              </div>
-            </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              More Projects on GitHub
+            </a>
           </div>
         </section>
 
@@ -749,3 +744,4 @@ function App() {
 }
 
 export default App;
+

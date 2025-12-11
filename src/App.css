@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+.dark-mode body {
+  background: #000000 !important;
+}
+
 .portfolio-root {
   min-height: 100vh;
   position: relative;
