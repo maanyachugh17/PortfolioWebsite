@@ -99,7 +99,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                UT Austin BSI (Info Tech, Data Science). I build multimodal AI for geospatial use cases, support early-stage AI startups, and focus on fast, measurable impact with human-centered products.
+                I'm a UT Austin student pursuing a BSI in Information Technology with a focus on Data Science. Currently contributing as an undergraduate student researcher exploring multimodal agentic AI in geospatial applications as well as contributing to startups in the AI space. I love collaborating on projects that make a difference, and I'm always eager to learn, create, and connect with others who share my drive for positive change.
               </p>
             </div>
             <div className="about-stats">
