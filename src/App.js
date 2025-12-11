@@ -481,6 +481,34 @@ function App() {
         <section id="projects" className="section glass-card">
           <h2>Featured Projects</h2>
           <div className="projects-grid">
+            <div 
+              className="project-card research-map-card" 
+              style={{ cursor: 'pointer', position: 'relative', zIndex: 10 }}
+              onClick={() => {
+                console.log('Research Map card clicked, setting showResearchMap to true');
+                setShowResearchMap(true);
+              }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setShowResearchMap(true);
+                }
+              }}
+            >
+              <div className="project-header">
+                <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
+                <span className="project-tag">Research</span>
+              </div>
+              <p>Interactive research timeline exploring environmental and ethical governance frameworks for commercial space activity.</p>
+              <div className="project-tech">
+                <span>Research</span>
+                <span>Policy Analysis</span>
+                <span>Mixed Methods</span>
+              </div>
+            </div>
+
             <div className="project-card">
               <div className="project-header">
                 <h3>SymptomSync</h3>
@@ -548,34 +576,6 @@ function App() {
                 <span>NLP</span>
                 <span>Machine Learning</span>
                 <span>FastAPI</span>
-              </div>
-            </div>
-
-            <div 
-              className="project-card research-map-card" 
-              style={{ cursor: 'pointer', position: 'relative', zIndex: 10 }}
-              onClick={() => {
-                console.log('Research Map card clicked, setting showResearchMap to true');
-                setShowResearchMap(true);
-              }}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setShowResearchMap(true);
-                }
-              }}
-            >
-              <div className="project-header">
-                <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
-                <span className="project-tag">Research</span>
-              </div>
-              <p>Interactive research timeline exploring environmental and ethical governance frameworks for commercial space activity.</p>
-              <div className="project-tech">
-                <span>Research</span>
-                <span>Policy Analysis</span>
-                <span>Mixed Methods</span>
               </div>
             </div>
 

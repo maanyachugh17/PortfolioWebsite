@@ -390,6 +390,45 @@ main {
   box-shadow: var(--shadow-light);
 }
 
+.dark-mode .btn-primary {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .btn-primary:hover {
+  background: #f0f0f0;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.dark-mode .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.cta-row {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dark-mode .cta-row button {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.dark-mode .cta-row button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
 .hero-links {
   display: flex;
   gap: 1rem;
