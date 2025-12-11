@@ -289,6 +289,13 @@ main {
   z-index: 2;
 }
 
+.dark-mode .hero-text {
+  background: #000000;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
 .hero-greeting {
   display: inline-block;
   font-size: 1.1rem;
