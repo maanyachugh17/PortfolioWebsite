@@ -11,6 +11,16 @@ import sunsetPhoto from './IMG_9882.jpeg';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 
+/** Ticker after About — aligned with Skills & Technologies + your stack */
+const MARQUEE_SKILLS = [
+  'Python', 'PyTorch', 'TensorFlow', 'Java', 'JavaScript', 'C++', 'SQL', 'HTML/CSS',
+  'React', 'Flask', 'FastAPI', 'Git', 'Linux', 'Pandas', 'NumPy', 'Scikit-learn',
+  'NLP', 'Hugging Face', 'KNIME',
+  'Multimodal AI', 'Geospatial AI', 'Agentic AI',
+  'Kotlin', 'Swift', 'Android Studio',
+  'Machine Learning', 'Data Pipelines', 'Figma'
+];
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,12 +28,10 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [showMoreExperience, setShowMoreExperience] = useState(false);
-
-  const [showMoreVolunteering, setShowMoreVolunteering] = useState(false);
   const [showResearchMap, setShowResearchMap] = useState(false);
   const [expandedPhase, setExpandedPhase] = useState(null);
 
-  const roles = ['AI Engineer', 'Hackathon Director', 'UX Designer', 'Researcher', 'Full Stack Engineer'];
+  const roles = ['AI Engineer', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [typePhase, setTypePhase] = useState('typing-in');
 
@@ -237,8 +245,8 @@ function App() {
               <h1 className="hero-title">Maanya Chugh</h1>
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
-                Multimodal AI researcher at UT Austin specializing in soundscape-to-image generation.
-                Building intelligent systems that bridge auditory and visual perceptions for urban planning and environmental monitoring.
+                IT &amp; Data Science @ UT Austin. Research in multimodal &amp; agentic AI (GiSense Lab); leading Hook &apos;Em Hacks;
+                incoming SWE @ Bank of America (Summer 2026). I care about systems that ship — lab to prod.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
@@ -273,7 +281,7 @@ function App() {
               <span className="currently-emoji" role="img" aria-label="research">&#128300;</span> Researching <strong>Multimodal AI</strong>
             </div>
             <div className="currently-item">
-              <span className="currently-emoji" role="img" aria-label="reading">&#128214;</span> Reading <strong>Why Buddhism Is True</strong>
+              <span className="currently-emoji" role="img" aria-label="reading">&#128214;</span> Reading <strong>The Alignment Problem</strong> <span className="currently-book-author">Brian Christian</span>
             </div>
           </div>
         </div>
@@ -286,11 +294,14 @@ function App() {
               <img src={aboutPhoto} alt="Maanya Chugh" />
             </div>
             <div className="about-body">
-              <p>
-                I'm a UT Austin student pursuing a BS in Information Technology with a focus on Data Science.
-                Currently a student researcher exploring multimodal agentic AI in geospatial applications,
-                as well as contributing to startups in the AI space. Also organizing a hackathon and hacker house in Austin!
-                For fun, I like to read, play chess, and DJ.
+              <p className="about-lede">
+                I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In the GiSense Lab that means PyTorch pipelines, dataset automation,
+                and evaluation loops — turning research questions into code people can run.
+              </p>
+              <p className="about-follow">
+                I run <strong>Hook &apos;Em Hacks</strong> end-to-end (sponsors, partnerships, ops) and help launch <strong>Hack48</strong>&apos;s Gen-Z hacker house in Austin.
+                I&apos;ve built with AI-stage startups, and I&apos;m joining <strong>Bank of America</strong> as an SWE intern in Summer 2026.
+                Open to research, collaborations, and opportunities where ML meets production systems.
               </p>
               <div className="about-stats" ref={statsRef}>
                 <div className="stat-item">
@@ -310,15 +321,14 @@ function App() {
           </div>
         </section>
 
-        {/* Marquee ticker */}
-        <div className="marquee-strip">
+        {/* Skills marquee */}
+        <div className="marquee-strip fade-in-section">
           <div className="marquee-track">
             {[...Array(2)].map((_, i) => (
               <div className="marquee-content" key={i}>
-                <span>Python</span><span>PyTorch</span><span>React</span>
-                <span>Figma</span><span>Machine Learning</span><span>UX Design</span>
-                <span>Full Stack</span><span>Data Science</span><span>KNIME</span>
-                <span>Hackathons</span><span>AI Ethics</span><span>Geospatial AI</span>
+                {MARQUEE_SKILLS.map(skill => (
+                  <span key={`${i}-${skill}`}>{skill}</span>
+                ))}
               </div>
             ))}
           </div>
@@ -333,21 +343,21 @@ function App() {
                 <h3>University of Texas at Austin</h3>
                 <p className="education-degree">Bachelor of Science in Information Technology, Data Science</p>
                 <p className="education-details">Minor in Computer Science &middot; GPA: 4.0/4.0 &middot; Aug 2024 – May 2027</p>
-                <p className="education-details">Activities: Hook 'Em Hacks (Director), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC '25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
+                <p className="education-details">Activities: Hook 'Em Hacks (Director), Longhorn Developers (Product Fellow), Sigma Delta Tau (Social Chair PC '25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-content">
                 <h3>DIS – Study Abroad in Copenhagen</h3>
                 <p className="education-degree">UT Global Ambassador</p>
-                <p className="education-details">Hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug – Dec 2024</p>
+                <p className="education-details">Copenhagen &middot; Field research on Scandinavian health systems and tech-enabled care models &middot; Aug – Dec 2024</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-content">
                 <h3>Y Combinator</h3>
                 <p className="education-degree">AI Startup School</p>
-                <p className="education-details">Jun 2025 – Jul 2025</p>
+                <p className="education-details">Selective cohort on building AI-native companies &middot; Jun – Jul 2025</p>
               </div>
             </div>
           </div>
@@ -381,13 +391,32 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
+                    <h3>Founder &amp; Director</h3>
+                    <span className="entry-company">
+                      <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
+                        Hook 'Em Hacks – UT Austin
+                      </a>
+                    </span>
+                  </div>
+                  <span className="entry-date">November 2025 – Present</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Lead an AI-focused hackathon — 250+ builders, 25+ mentors, $10K+ in prizes</li>
+                  <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
+                  <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
                     <h3>Austin City Lead</h3>
                     <span className="entry-company">Hack48</span>
                   </div>
                   <span className="entry-date">January 2026 – Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Organizing Austin's first Gen-Z hacker house, creating a collaborative space for builders and innovators</li>
+                  <li>Organizing Austin&apos;s first Gen-Z hacker house — space for builders and innovators</li>
                 </ul>
               </div>
 
@@ -400,9 +429,9 @@ function App() {
                   <span className="entry-date">August 2025 – Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Developed and optimized Python/PyTorch pipelines for audio-to-image generation, improving model accuracy by 10% through algorithmic fine-tuning and evaluation</li>
-                  <li>Automated dataset curation workflows, reducing prep time by 5% and enabling scalable experimentation</li>
-                  <li>Collaborated with cross-disciplinary teams to design multimodal AI applications for urban planning and environmental monitoring</li>
+                  <li>Developed and optimized Python/PyTorch pipelines for audio-to-image generation; improved model accuracy through fine-tuning and rigorous evaluation</li>
+                  <li>Automated dataset curation workflows to cut prep time and scale experiments</li>
+                  <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
                 </ul>
               </div>
 
@@ -415,27 +444,14 @@ function App() {
                   <span className="entry-date">June 2025 – August 2025</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Collaborated across 3 teams to deliver time-saving automation scripts and apps using Python and KNIME</li>
-                  <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
-                  <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
+                  <li>Delivered automation in Python and KNIME across three audit teams</li>
+                  <li>Shipped a KNIME Business Hub app that unified fragmented audit workflows</li>
+                  <li>Contributed to ML prototyping and AI governance documentation for audit use cases</li>
                 </ul>
               </div>
 
               {showMoreExperience && (
                 <>
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>AI Extern</h3>
-                        <span className="entry-company">UT Austin WiSTEM</span>
-                      </div>
-                      <span className="entry-date">December 2025 – January 2026</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Participated in UT Austin's Winter 2025 Women in STEM Externship focused on Artificial Intelligence and Semiconductor technologies</li>
-                    </ul>
-                  </div>
-
                   <div className="entry-item">
                     <div className="entry-header">
                       <div>
@@ -445,8 +461,21 @@ function App() {
                       <span className="entry-date">September 2025 – February 2026</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Promoted Perplexity AI tools and features within the campus community</li>
-                      <li>Organized workshops and events to showcase AI-powered research and productivity tools</li>
+                      <li>Drove adoption of Perplexity on campus through demos, workshops, and office hours</li>
+                      <li>Connected students and orgs with AI-powered research and productivity workflows</li>
+                    </ul>
+                  </div>
+
+                  <div className="entry-item">
+                    <div className="entry-header">
+                      <div>
+                        <h3>AI Extern</h3>
+                        <span className="entry-company">UT Austin WiSTEM</span>
+                      </div>
+                      <span className="entry-date">December 2025 – January 2026</span>
+                    </div>
+                    <ul className="entry-details">
+                      <li>Winter 2025 externship focused on AI and semiconductor technologies — labs, talks, and applied projects</li>
                     </ul>
                   </div>
 
@@ -459,7 +488,7 @@ function App() {
                       <span className="entry-date">August 2025 – November 2025</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Supported growth initiatives for a ride-sharing startup in Austin, Texas</li>
+                      <li>Supported growth and GTM for an Austin-based ride-sharing startup</li>
                     </ul>
                   </div>
 
@@ -472,97 +501,29 @@ function App() {
                       <span className="entry-date">August 2025 – September 2025</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Built and deployed a production-ready AI agent using modular architecture, enabling enterprise workflow automation at scale</li>
-                      <li>Conducted competitive analysis of generative AI platforms, influencing product roadmap decisions</li>
+                      <li>Built and deployed production AI agents with modular architecture for enterprise workflow automation</li>
+                      <li>Benchmarked generative AI platforms and fed insights into product direction</li>
                     </ul>
                   </div>
 
                   <div className="entry-item">
                     <div className="entry-header">
                       <div>
-                        <h3>Intern</h3>
-                        <span className="entry-company">NJDACC – NJ 16th Legislative District</span>
+                        <h3>Operations &amp; Technology</h3>
+                        <span className="entry-company">Kupid Dating</span>
                       </div>
-                      <span className="entry-date">July 2023 – June 2024</span>
+                      <span className="entry-date">January 2025 – January 2026</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Conducted voter outreach and event planning for Senator Zwicker and NJ Assembly representatives</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Programmer</h3>
-                        <span className="entry-company">VEX Robotics – Team 750C</span>
-                      </div>
-                      <span className="entry-date">August 2020 – May 2024</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Programmed autonomous and driver-controlled routines for competitive robotics</li>
-                      <li>Qualified for National championships</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Summer Intern</h3>
-                        <span className="entry-company">Jetson</span>
-                      </div>
-                      <span className="entry-date">May 2023 – August 2023</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Summer programming intern for Jetson, a Top 40 company (Ondeck list) making fintech and investment accessible to teens</li>
-                      <li>Conducted UX research & usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Summer Immersion Program</h3>
-                        <span className="entry-company">Girls Who Code</span>
-                      </div>
-                      <span className="entry-date">July 2023</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Developed programs partnered with Synchrony Financial to gain hands-on experience with technology</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Sensei</h3>
-                        <span className="entry-company">Code Ninjas Kendall Park</span>
-                      </div>
-                      <span className="entry-date">July 2022 – April 2023</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Taught all levels of code from Scratch to UnityHub to students aged 5 to 14</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Technology Developer & Outreach Coordinator</h3>
-                        <span className="entry-company">A Sustainable Future</span>
-                      </div>
-                      <span className="entry-date">October 2022 – May 2024</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Leveraged data modeling to optimize waste management for 10 educational institutions</li>
-                      <li>Implemented tech-driven sustainability solutions with measurable improvements</li>
-                      <li>Organized outreach campaigns and educational workshops on environmental responsibility</li>
+                      <li>Ran finances, logistics, and ops for multi-campus tours (UT Austin, UT Dallas, A&amp;M, UIUC, Rutgers)</li>
+                      <li>Built internal workflows and lightweight tooling for events and coordination</li>
                     </ul>
                   </div>
                 </>
               )}
             </div>
             <div className="cta-row">
-              <button className="btn-secondary" onClick={() => setShowMoreExperience(!showMoreExperience)}>
+              <button type="button" className="btn-secondary" onClick={() => setShowMoreExperience(!showMoreExperience)}>
                 {showMoreExperience ? 'See fewer' : 'See more'}
               </button>
             </div>
@@ -704,6 +665,7 @@ function App() {
                 <div className="skill-grid">
                   <span className="skill-tag">React</span>
                   <span className="skill-tag">Flask</span>
+                  <span className="skill-tag">FastAPI</span>
                   <span className="skill-tag">PyTorch</span>
                   <span className="skill-tag">Android Studio</span>
                   <span className="skill-tag">Git</span>
@@ -787,34 +749,10 @@ function App() {
 
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
-                <h3>1st Place – Data Visualization</h3>
-                <span className="project-tag">South Brunswick Hackathon</span>
-              </div>
-              <p>Competed with 40+ teams and presented innovative data insights to Bloomberg employees.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
                 <h3>Best Use of Hedera</h3>
-                <span className="project-tag">Technica – UMD Hackathon</span>
+                <span className="project-tag">Technica – UMD</span>
               </div>
-              <p>Developed creative blockchain solution leveraging Hedera, earning top honors for innovation.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Best Hack for Social Good</h3>
-                <span className="project-tag">Bridgewater-Raritan Hacks</span>
-              </div>
-              <p>Created impactful solution addressing social challenges in the community.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Honorable Mention</h3>
-                <span className="project-tag">South Brunswick Hackathon</span>
-              </div>
-              <p>Recognized for outstanding project at the South Brunswick High School Hackathon (April 2023).</p>
+              <p>Built on Hedera; recognized for technical execution and innovation at UMD&apos;s women-focused hackathon.</p>
             </div>
           </div>
         </section>
@@ -831,33 +769,14 @@ function App() {
             <div className="entry-item">
               <div className="entry-header">
                 <div>
-                  <h3>Founder & Director</h3>
-                  <span className="entry-company">
-                    <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
-                      Hook 'Em Hacks – UT Austin
-                    </a>
-                  </span>
-                </div>
-                <span className="entry-date">November 2025 – Present</span>
-              </div>
-              <ul className="entry-details">
-                <li>Directing an AI-focused hackathon at UT Austin with 250+ builders, 25+ mentors, and $10,000+ in prizes</li>
-                <li>Secured sponsorships from Harper (YC W25), IBM, Vercel, Hudson River Trading, AWS, Jane Street, and more</li>
-                <li>Building partnerships with SH1P and Velric to create hiring portals directly within the hackathon</li>
-              </ul>
-            </div>
-
-            <div className="entry-item">
-              <div className="entry-header">
-                <div>
-                  <h3>Designer & UX Design Fellow</h3>
-                  <span className="entry-company">Longhorn Developers & UX Design Club – UT Registration Plus</span>
+                  <h3>Designer &amp; Product Fellow</h3>
+                  <span className="entry-company">Longhorn Developers – UT Registration Plus</span>
                 </div>
                 <span className="entry-date">March 2025 – Present</span>
               </div>
               <ul className="entry-details">
                 <li>Redesigned core UI in Figma, improving course planning efficiency by 20%</li>
-                <li>Lead UX design initiatives for student-developed applications and platforms</li>
+                <li>Lead product and design initiatives for student-developed applications and platforms</li>
                 <li>Mentor fellow students in user-centered design principles and prototyping</li>
               </ul>
             </div>
@@ -888,8 +807,8 @@ function App() {
                     <span className="entry-date">January 2025 – Present</span>
                   </div>
                   <ul className="entry-details">
-                    <li>Actively listened to student concerns and collaborated with committee members to implement social events</li>
-                    <li>Enhanced student life and strengthened campus connections through community initiatives</li>
+                    <li>Represent student voice on community engagement; turn feedback into programming and campus events</li>
+                    <li>Partner with SG and UT partners to improve student life and belonging</li>
                   </ul>
                 </div>
 
@@ -946,92 +865,22 @@ function App() {
           </div>
         </section>
 
-        {/* Volunteering */}
-        <section id="volunteering" className="section fade-in-section">
-          <h2>Volunteering</h2>
-          <div className="entry-list">
-            <div className="entry-item">
-              <div className="entry-header">
-                <div>
-                  <h3>Medical Records Data Entry Volunteer</h3>
-                  <span className="entry-company">Austin Pets Alive!</span>
-                </div>
-                <span className="entry-date">January 2026 – Present</span>
-              </div>
-              <ul className="entry-details">
-                <li>Assist with accurate data entry and organization of animal medical records to support veterinary care and shelter operations</li>
-              </ul>
-            </div>
-
-            <div className="entry-item">
-              <div className="entry-header">
-                <div>
-                  <h3>Operations Strategist</h3>
-                  <span className="entry-company">CRSH Media</span>
-                </div>
-                <span className="entry-date">January 2025 – January 2026</span>
-              </div>
-              <ul className="entry-details">
-                <li>Managing the finances, logistics, and operations of the company</li>
-                <li>Organizing college tour events at UT Austin, UT Dallas, A&M, UIUC, and Rutgers</li>
-              </ul>
-            </div>
-
-            {showMoreVolunteering && (
-              <>
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Explorer</h3>
-                      <span className="entry-company">Kendall Park First Aid & Rescue Squad</span>
-                    </div>
-                    <span className="entry-date">October 2022 – July 2024</span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Participated in first aid and emergency response training and community service</li>
-                  </ul>
-                </div>
-
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Youth Council Member</h3>
-                      <span className="entry-company">American Red Cross</span>
-                    </div>
-                    <span className="entry-date">December 2022 – July 2024</span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Served on the youth council supporting health and safety initiatives in the community</li>
-                  </ul>
-                </div>
-
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Advisory Board Member</h3>
-                      <span className="entry-company">TechGirls</span>
-                    </div>
-                    <span className="entry-date"></span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Served on the advisory board supporting science and technology initiatives for young women</li>
-                  </ul>
-                </div>
-
-              </>
-            )}
-          </div>
-          <div className="cta-row">
-            <button className="btn-secondary" onClick={() => setShowMoreVolunteering(!showMoreVolunteering)}>
-              {showMoreVolunteering ? 'See fewer' : 'See more'}
-            </button>
-          </div>
-        </section>
-
         {/* Photo break — resort */}
         <div className="photo-break fade-in-section">
           <img src={beachPhoto} alt="" style={{ objectPosition: 'center 35%' }} />
         </div>
+
+        {/* Publications */}
+        <section id="publications" className="section fade-in-section">
+          <h2>Publications</h2>
+          <div className="publication-item">
+            <div className="publication-content">
+              <h3>"Dismantling Algorithmic Prejudice: Safeguarding Equity and Ethical Deliberation in A.I."</h3>
+              <p className="publication-details">Greenhouse Publishing &middot; December 5, 2023</p>
+              <p>Essay on algorithmic fairness, equity, and ethical deliberation in deployed AI systems — how bias propagates and what safeguards matter.</p>
+            </div>
+          </div>
+        </section>
 
         {/* Awards */}
         <section id="awards" className="section fade-in-section">
@@ -1039,7 +888,7 @@ function App() {
           <div className="awards-grid">
             <div className="award-item">
               <div className="award-content">
-                <h3>Houston Endowment President's Excellence Scholarship</h3>
+                <h3>Houston Endowment President&apos;s Excellence Scholarship</h3>
                 <p>Merit-based academic award at UT Austin for excellence, leadership, and community impact</p>
               </div>
             </div>
@@ -1053,18 +902,6 @@ function App() {
               <div className="award-content">
                 <h3>NCWIT National Honorable Mention</h3>
                 <p>Additional national recognition from NCWIT for excellence in computing (April 2023)</p>
-              </div>
-            </div>
-            <div className="award-item">
-              <div className="award-content">
-                <h3>National Merit Commended Scholar</h3>
-                <p>Recognition for exceptional academic performance on the PSAT/NMSQT</p>
-              </div>
-            </div>
-            <div className="award-item">
-              <div className="award-content">
-                <h3>AP Scholar with Distinction</h3>
-                <p>Academic excellence recognition for outstanding performance in advanced placement courses</p>
               </div>
             </div>
             <div className="award-item">
@@ -1119,23 +956,11 @@ function App() {
           </div>
         </section>
 
-        {/* Publications */}
-        <section id="publications" className="section fade-in-section">
-          <h2>Publications</h2>
-          <div className="publication-item">
-            <div className="publication-content">
-              <h3>"Dismantling Algorithmic Prejudice: Safeguarding Equity and Ethical Deliberation in A.I."</h3>
-              <p className="publication-details">Greenhouse Publishing &middot; December 5, 2023</p>
-              <p>A theoretical exploration of the intricate interplay between algorithmic decision-making, equity, and ethical considerations within AI systems.</p>
-            </div>
-          </div>
-        </section>
-
         {/* Big CTA */}
         <section className="cta-hero fade-in-section">
           <div className="cta-hero-inner">
-            <h2 className="cta-hero-heading">Have an idea?<br />Let's make it real.</h2>
-            <p className="cta-hero-sub">I'm always looking for the next interesting problem to solve, whether it's a hackathon, a research project, or a startup.</p>
+            <h2 className="cta-hero-heading">Have an idea?<br />Let&apos;s make it real.</h2>
+            <p className="cta-hero-sub">Research collaborations, internships, hackathons, or something weird at the edge of AI — I&apos;m easy to reach.</p>
             <div className="cta-hero-actions">
               <a href="mailto:maanyac17@utexas.edu" className="btn-primary">Say Hello</a>
               <a href="https://calendly.com/maanyachugh17/30-minute-meeting-clone" className="btn-secondary" target="_blank" rel="noopener noreferrer">Book a Meeting</a>

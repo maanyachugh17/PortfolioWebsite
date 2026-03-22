@@ -537,6 +537,17 @@ body {
   margin-bottom: 2rem;
 }
 
+.about-body .about-lede {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.about-body .about-follow {
+  margin-bottom: 2rem;
+}
+
 .about-stats {
   display: flex;
   gap: 1.25rem;
@@ -613,7 +624,7 @@ body {
 }
 
 /* ================================================================
-   Entry list  (Experience / Leadership / Volunteering)
+   Entry list  (Experience / Leadership)
    ================================================================ */
 .entry-list {
   display: grid;
@@ -1418,6 +1429,12 @@ body {
 .currently-item strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.currently-book-author {
+  font-size: 0.82em;
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 /* ================================================================
