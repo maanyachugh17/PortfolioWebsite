@@ -18,7 +18,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMoreLeadership, setShowMoreLeadership] = useState(false);
   const [showMoreExperience, setShowMoreExperience] = useState(false);
-  const [showMoreEducation, setShowMoreEducation] = useState(false);
+
   const [showMoreVolunteering, setShowMoreVolunteering] = useState(false);
   const [showResearchMap, setShowResearchMap] = useState(false);
   const [expandedPhase, setExpandedPhase] = useState(null);
@@ -138,7 +138,7 @@ function App() {
 
   // Active nav section tracking
   useEffect(() => {
-    const sectionIds = ['hero', 'about', 'education', 'experience', 'leadership', 'projects', 'skills', 'contact'];
+    const sectionIds = ['hero', 'about', 'education', 'experience', 'projects', 'skills', 'hackathons', 'leadership', 'contact'];
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -193,7 +193,6 @@ function App() {
           <li><a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a></li>
           <li><a href="#education" className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
           <li><a href="#experience" className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
-          <li><a href="#leadership" className={activeSection === 'leadership' ? 'active' : ''}>Leadership</a></li>
           <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
           <li><a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
           <li><a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
@@ -221,7 +220,6 @@ function App() {
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#education" onClick={closeMenu}>Education</a>
             <a href="#experience" onClick={closeMenu}>Experience</a>
-            <a href="#leadership" onClick={closeMenu}>Leadership</a>
             <a href="#projects" onClick={closeMenu}>Projects</a>
             <a href="#skills" onClick={closeMenu}>Skills</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
@@ -352,37 +350,6 @@ function App() {
                 <p className="education-details">Jun 2025 – Jul 2025</p>
               </div>
             </div>
-            {showMoreEducation && (
-              <>
-                <div className="education-item">
-                  <div className="education-content">
-                    <h3>New York University</h3>
-                    <p className="education-degree">UX Design Summer Program</p>
-                    <p className="education-details">Accepted into NYU's competitive summer program; designed a mobile app prototype for voter engagement with professors over 2 weeks &middot; Jul – Aug 2023</p>
-                  </div>
-                </div>
-                <div className="education-item">
-                  <div className="education-content">
-                    <h3>South Brunswick High School</h3>
-                    <p className="education-degree">GPA: 4.0</p>
-                    <p className="education-details">2020 – 2024</p>
-                    <p className="education-details">Activities: Robotics, Student Council, Computer Science Academy, Girls Who Code, Junior State of America</p>
-                  </div>
-                </div>
-                <div className="education-item">
-                  <div className="education-content">
-                    <h3>Middlesex College</h3>
-                    <p className="education-degree">Dual Enrollment</p>
-                    <p className="education-details">Dual enrollment courses taken alongside South Brunswick High School</p>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-          <div className="cta-row">
-            <button className="btn-secondary" onClick={() => setShowMoreEducation(!showMoreEducation)}>
-              {showMoreEducation ? 'See fewer' : 'See more'}
-            </button>
           </div>
         </section>
 
@@ -602,6 +569,261 @@ function App() {
           </section>
         </div>
 
+        {/* Photo break — B&W city */}
+        <div className="photo-break fade-in-section">
+          <img src={cityPhoto} alt="" />
+        </div>
+
+        {/* Projects */}
+        <section id="projects" className="section fade-in-section">
+          <h2>Featured Projects</h2>
+          <div className="projects-grid stagger-children fade-in-section">
+            <div
+              className="project-card research-map-card"
+              style={{ cursor: 'pointer' }}
+              onClick={() => setShowResearchMap(true)}
+              onMouseMove={handleCardMouseMove}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setShowResearchMap(true);
+                }
+              }}
+            >
+              <div className="project-header">
+                <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
+                <span className="project-tag">Research</span>
+              </div>
+              <p>Interactive research timeline exploring environmental and ethical governance frameworks for commercial space activity.</p>
+              <div className="project-tech">
+                <span>Research</span>
+                <span>Policy Analysis</span>
+                <span>Mixed Methods</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>SymptomSync</h3>
+                <span className="project-tag">AI/Healthcare</span>
+              </div>
+              <p>Clinical NLP triage assistant using HF Transformers + PyTorch for symptom extraction and diagnosis inference.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>PyTorch</span>
+                <span>HuggingFace</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>AI-Driven Cardiac Risk Classifier</h3>
+                <span className="project-tag">ML/Healthcare</span>
+              </div>
+              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Pandas</span>
+                <span>EHR Analysis</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>QuantFin Analytics</h3>
+                <span className="project-tag">Quantitative Finance</span>
+              </div>
+              <p>ML-powered price prediction and risk dashboards; 85% accuracy in stock direction and 23% risk reduction.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Financial Modeling</span>
+                <span>Risk Analytics</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>EcoTrack Platform</h3>
+                <span className="project-tag">Full Stack/ML</span>
+              </div>
+              <p>IoT + ML monitoring for air quality; improved pollution forecasting accuracy by 25% across 10+ cities.</p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>IoT</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>SmartRecruit AI</h3>
+                <span className="project-tag">AI/HR Tech</span>
+              </div>
+              <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Machine Learning</span>
+                <span>FastAPI</span>
+              </div>
+            </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              More Projects on GitHub
+            </a>
+          </div>
+        </section>
+
+        {/* Skills — dark band */}
+        <div className="band-dark fade-in-section">
+          <section id="skills" className="section">
+            <h2>Skills &amp; Technologies</h2>
+            <div className="skills-container">
+              <div className="skill-category">
+                <h3>Programming Languages</h3>
+                <div className="skill-grid">
+                  <span className="skill-tag">Python</span>
+                  <span className="skill-tag">Java</span>
+                  <span className="skill-tag">C++</span>
+                  <span className="skill-tag">JavaScript</span>
+                  <span className="skill-tag">Kotlin</span>
+                  <span className="skill-tag">Swift</span>
+                  <span className="skill-tag">SQL</span>
+                  <span className="skill-tag">HTML/CSS</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Frameworks &amp; Tools</h3>
+                <div className="skill-grid">
+                  <span className="skill-tag">React</span>
+                  <span className="skill-tag">Flask</span>
+                  <span className="skill-tag">PyTorch</span>
+                  <span className="skill-tag">Android Studio</span>
+                  <span className="skill-tag">Git</span>
+                  <span className="skill-tag">KNIME</span>
+                  <span className="skill-tag">Figma</span>
+                  <span className="skill-tag">Tableau</span>
+                  <span className="skill-tag">Linux CLI</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Data Science &amp; Analytics</h3>
+                <div className="skill-grid">
+                  <span className="skill-tag">Machine Learning</span>
+                  <span className="skill-tag">Statistical Analysis</span>
+                  <span className="skill-tag">Financial Modeling</span>
+                  <span className="skill-tag">Risk Management</span>
+                  <span className="skill-tag">Time Series Analysis</span>
+                  <span className="skill-tag">Quantitative Finance</span>
+                  <span className="skill-tag">Pandas</span>
+                  <span className="skill-tag">NumPy</span>
+                  <span className="skill-tag">Scikit-learn</span>
+                  <span className="skill-tag">TensorFlow</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h3>Spoken Languages</h3>
+                <div className="skill-grid">
+                  <span className="skill-tag">English (Fluent)</span>
+                  <span className="skill-tag">Hindi (Fluent)</span>
+                  <span className="skill-tag">French (Basic)</span>
+                  <span className="skill-tag">Danish (Basic)</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="tech-showcase">
+              <div className="tech-grid">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" />
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Photo diptych — Swiss village + Copenhagen */}
+        <div className="photo-diptych fade-in-section">
+          <div className="diptych-img">
+            <img src={villagePhoto} alt="" />
+          </div>
+          <div className="diptych-img">
+            <img src={copenhagenPhoto} alt="" />
+          </div>
+        </div>
+
+        {/* Hackathon Wins */}
+        <section id="hackathons" className="section fade-in-section">
+          <h2>Hackathon Wins</h2>
+          <div className="projects-grid stagger-children fade-in-section">
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>1st Place – Marshall Wace Category</h3>
+                <span className="project-tag">Hack @ Brown</span>
+              </div>
+              <p>Earned top honors in the Marshall Wace sponsored category at Brown University's hackathon (February 2026).</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Best Use of Gemini API</h3>
+                <span className="project-tag">Hack @ Brown</span>
+              </div>
+              <p>Recognized for innovative application of Google's Gemini API at Hack @ Brown (February 2026).</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>1st Place – Data Visualization</h3>
+                <span className="project-tag">South Brunswick Hackathon</span>
+              </div>
+              <p>Competed with 40+ teams and presented innovative data insights to Bloomberg employees.</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Best Use of Hedera</h3>
+                <span className="project-tag">Technica – UMD Hackathon</span>
+              </div>
+              <p>Developed creative blockchain solution leveraging Hedera, earning top honors for innovation.</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Best Hack for Social Good</h3>
+                <span className="project-tag">Bridgewater-Raritan Hacks</span>
+              </div>
+              <p>Created impactful solution addressing social challenges in the community.</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Honorable Mention</h3>
+                <span className="project-tag">South Brunswick Hackathon</span>
+              </div>
+              <p>Recognized for outstanding project at the South Brunswick High School Hackathon (April 2023).</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Photo break — sunset */}
+        <div className="photo-break fade-in-section">
+          <img src={sunsetPhoto} alt="" />
+        </div>
+
         {/* Leadership */}
         <section id="leadership" className="section fade-in-section">
           <h2>Leadership &amp; Activities</h2>
@@ -796,31 +1018,6 @@ function App() {
                   </ul>
                 </div>
 
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Teaching Assistant</h3>
-                      <span className="entry-company">Toastmasters International</span>
-                    </div>
-                    <span className="entry-date"></span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Assisted with public speaking and communication skills development programs</li>
-                  </ul>
-                </div>
-
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Volunteer</h3>
-                      <span className="entry-company">North South Foundation</span>
-                    </div>
-                    <span className="entry-date"></span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Volunteered for educational programs and community outreach</li>
-                  </ul>
-                </div>
               </>
             )}
           </div>
@@ -828,256 +1025,6 @@ function App() {
             <button className="btn-secondary" onClick={() => setShowMoreVolunteering(!showMoreVolunteering)}>
               {showMoreVolunteering ? 'See fewer' : 'See more'}
             </button>
-          </div>
-        </section>
-
-        {/* Photo break — B&W city */}
-        <div className="photo-break fade-in-section">
-          <img src={cityPhoto} alt="" />
-        </div>
-
-        {/* Skills — dark band */}
-        <div className="band-dark fade-in-section">
-          <section id="skills" className="section">
-            <h2>Skills &amp; Technologies</h2>
-            <div className="skills-container">
-              <div className="skill-category">
-                <h3>Programming Languages</h3>
-                <div className="skill-grid">
-                  <span className="skill-tag">Python</span>
-                  <span className="skill-tag">Java</span>
-                  <span className="skill-tag">C++</span>
-                  <span className="skill-tag">JavaScript</span>
-                  <span className="skill-tag">Kotlin</span>
-                  <span className="skill-tag">Swift</span>
-                  <span className="skill-tag">SQL</span>
-                  <span className="skill-tag">HTML/CSS</span>
-                </div>
-              </div>
-              <div className="skill-category">
-                <h3>Frameworks &amp; Tools</h3>
-                <div className="skill-grid">
-                  <span className="skill-tag">React</span>
-                  <span className="skill-tag">Flask</span>
-                  <span className="skill-tag">PyTorch</span>
-                  <span className="skill-tag">Android Studio</span>
-                  <span className="skill-tag">Git</span>
-                  <span className="skill-tag">KNIME</span>
-                  <span className="skill-tag">Figma</span>
-                  <span className="skill-tag">Tableau</span>
-                  <span className="skill-tag">Linux CLI</span>
-                </div>
-              </div>
-              <div className="skill-category">
-                <h3>Data Science &amp; Analytics</h3>
-                <div className="skill-grid">
-                  <span className="skill-tag">Machine Learning</span>
-                  <span className="skill-tag">Statistical Analysis</span>
-                  <span className="skill-tag">Financial Modeling</span>
-                  <span className="skill-tag">Risk Management</span>
-                  <span className="skill-tag">Time Series Analysis</span>
-                  <span className="skill-tag">Quantitative Finance</span>
-                  <span className="skill-tag">Pandas</span>
-                  <span className="skill-tag">NumPy</span>
-                  <span className="skill-tag">Scikit-learn</span>
-                  <span className="skill-tag">TensorFlow</span>
-                </div>
-              </div>
-              <div className="skill-category">
-                <h3>Spoken Languages</h3>
-                <div className="skill-grid">
-                  <span className="skill-tag">English (Fluent)</span>
-                  <span className="skill-tag">Hindi (Fluent)</span>
-                  <span className="skill-tag">French (Basic)</span>
-                  <span className="skill-tag">Danish (Basic)</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="tech-showcase">
-              <div className="tech-grid">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" />
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* Projects */}
-        <section id="projects" className="section fade-in-section">
-          <h2>Featured Projects</h2>
-          <div className="projects-grid stagger-children fade-in-section">
-            <div
-              className="project-card research-map-card"
-              style={{ cursor: 'pointer' }}
-              onClick={() => setShowResearchMap(true)}
-              onMouseMove={handleCardMouseMove}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setShowResearchMap(true);
-                }
-              }}
-            >
-              <div className="project-header">
-                <h3>Research Map: Ethical and Environmental Governance of Space Commercialization</h3>
-                <span className="project-tag">Research</span>
-              </div>
-              <p>Interactive research timeline exploring environmental and ethical governance frameworks for commercial space activity.</p>
-              <div className="project-tech">
-                <span>Research</span>
-                <span>Policy Analysis</span>
-                <span>Mixed Methods</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>SymptomSync</h3>
-                <span className="project-tag">AI/Healthcare</span>
-              </div>
-              <p>Clinical NLP triage assistant using HF Transformers + PyTorch for symptom extraction and diagnosis inference.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>NLP</span>
-                <span>PyTorch</span>
-                <span>HuggingFace</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>AI-Driven Cardiac Risk Classifier</h3>
-                <span className="project-tag">ML/Healthcare</span>
-              </div>
-              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Pandas</span>
-                <span>EHR Analysis</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>QuantFin Analytics</h3>
-                <span className="project-tag">Quantitative Finance</span>
-              </div>
-              <p>ML-powered price prediction and risk dashboards; 85% accuracy in stock direction and 23% risk reduction.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Financial Modeling</span>
-                <span>Risk Analytics</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>EcoTrack Platform</h3>
-                <span className="project-tag">Full Stack/ML</span>
-              </div>
-              <p>IoT + ML monitoring for air quality; improved pollution forecasting accuracy by 25% across 10+ cities.</p>
-              <div className="project-tech">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Python</span>
-                <span>IoT</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>SmartRecruit AI</h3>
-                <span className="project-tag">AI/HR Tech</span>
-              </div>
-              <p>NLP + ML matching engine; reduced hiring time by 40% and improved candidate fit by 30% (500+ resumes/day).</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>NLP</span>
-                <span>Machine Learning</span>
-                <span>FastAPI</span>
-              </div>
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
-              More Projects on GitHub
-            </a>
-          </div>
-        </section>
-
-        {/* Photo diptych — Swiss village + Copenhagen */}
-        <div className="photo-diptych fade-in-section">
-          <div className="diptych-img">
-            <img src={villagePhoto} alt="" />
-          </div>
-          <div className="diptych-img">
-            <img src={copenhagenPhoto} alt="" />
-          </div>
-        </div>
-
-        {/* Hackathon Wins */}
-        <section id="hackathons" className="section fade-in-section">
-          <h2>Hackathon Wins</h2>
-          <div className="projects-grid stagger-children fade-in-section">
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>1st Place – Marshall Wace Category</h3>
-                <span className="project-tag">Hack @ Brown</span>
-              </div>
-              <p>Earned top honors in the Marshall Wace sponsored category at Brown University's hackathon (February 2026).</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Best Use of Gemini API</h3>
-                <span className="project-tag">Hack @ Brown</span>
-              </div>
-              <p>Recognized for innovative application of Google's Gemini API at Hack @ Brown (February 2026).</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>1st Place – Data Visualization</h3>
-                <span className="project-tag">South Brunswick Hackathon</span>
-              </div>
-              <p>Competed with 40+ teams and presented innovative data insights to Bloomberg employees.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Best Use of Hedera</h3>
-                <span className="project-tag">Technica – UMD Hackathon</span>
-              </div>
-              <p>Developed creative blockchain solution leveraging Hedera, earning top honors for innovation.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Best Hack for Social Good</h3>
-                <span className="project-tag">Bridgewater-Raritan Hacks</span>
-              </div>
-              <p>Created impactful solution addressing social challenges in the community.</p>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>Honorable Mention</h3>
-                <span className="project-tag">South Brunswick Hackathon</span>
-              </div>
-              <p>Recognized for outstanding project at the South Brunswick High School Hackathon (April 2023).</p>
-            </div>
           </div>
         </section>
 
@@ -1183,11 +1130,6 @@ function App() {
             </div>
           </div>
         </section>
-
-        {/* Photo break — sunset over water */}
-        <div className="photo-break fade-in-section">
-          <img src={sunsetPhoto} alt="" />
-        </div>
 
         {/* Big CTA */}
         <section className="cta-hero fade-in-section">
