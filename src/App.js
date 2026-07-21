@@ -15,10 +15,8 @@ import { createPortal } from 'react-dom';
 const MARQUEE_SKILLS = [
   'Python', 'PyTorch', 'TensorFlow', 'Java', 'JavaScript', 'C++', 'SQL', 'HTML/CSS',
   'React', 'Flask', 'FastAPI', 'Git', 'Linux', 'Pandas', 'NumPy', 'Scikit-learn',
-  'NLP', 'Hugging Face', 'KNIME',
-  'Multimodal AI', 'Geospatial AI', 'Agentic AI',
-  'Kotlin', 'Swift', 'Android Studio',
-  'Machine Learning', 'Data Pipelines', 'Figma'
+  'NLP', 'Hugging Face', 'KNIME', 'Multimodal AI', 'Geospatial AI', 'Agentic AI',
+  'Kotlin', 'Swift', 'Android Studio', 'Machine Learning', 'Human-Centered Data Science', 'Figma'
 ];
 
 function App() {
@@ -245,8 +243,8 @@ function App() {
               <h1 className="hero-title">Maanya Chugh</h1>
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
-                IT &amp; Data Science @ UT Austin. Research in multimodal &amp; agentic AI (GiSense Lab); leading Hook &apos;Em Hacks;
-                incoming SWE @ Bank of America (Summer 2026). I care about systems that ship — lab to prod.
+                IT student at UT Austin, specializing in Human-Centered Data Science. SWE intern at Bank of America, researching multimodal AI at the
+                Soundscape-to-Image Lab, and running Hook &apos;Em Hacks.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
@@ -295,12 +293,12 @@ function App() {
             </div>
             <div className="about-body">
               <p className="about-lede">
-                I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In the GiSense Lab that means PyTorch pipelines, dataset automation,
-                and evaluation loops — turning research questions into code people can run.
+                I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In UT Austin&apos;s Soundscape-to-Image Lab that means
+                PyTorch pipelines for audio, frames, and metadata: preprocessing, embeddings, and datasets that feed real experiments.
               </p>
               <p className="about-follow">
                 I run <strong>Hook &apos;Em Hacks</strong> end-to-end (sponsors, partnerships, ops) and help launch <strong>Hack48</strong>&apos;s Gen-Z hacker house in Austin.
-                I&apos;ve built with AI-stage startups, and I&apos;m joining <strong>Bank of America</strong> as an SWE intern in Summer 2026.
+                I&apos;ve built with AI-stage startups, and I&apos;m an SWE intern at <strong>Bank of America</strong>.
                 Open to research, collaborations, and opportunities where ML meets production systems.
               </p>
               <div className="about-stats" ref={statsRef}>
@@ -341,23 +339,24 @@ function App() {
             <div className="education-item">
               <div className="education-content">
                 <h3>University of Texas at Austin</h3>
-                <p className="education-degree">Bachelor of Science in Information Technology, Data Science</p>
-                <p className="education-details">Minor in Computer Science &middot; GPA: 4.0/4.0 &middot; Aug 2024 – May 2027</p>
-                <p className="education-details">Activities: Hook 'Em Hacks (Director), Longhorn Developers (Product Fellow), Sigma Delta Tau (Social Chair PC '25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
+                <p className="education-degree">Bachelor of Science in Information Technology</p>
+                <p className="education-details">Specializing in Human-Centered Data Science &middot; Minor in Computer Science &middot; GPA: 4.0/4.0 &middot; Aug 2024 to May 2027</p>
+                <p className="education-details">Relevant Coursework: Data Structures, Mobile Application Development, Virtual Reality &amp; Game Design, Human-Centered Data Science, Ethical AI, UI/UX Design</p>
+                <p className="education-details">Activities: Hook &apos;Em Hacks (Director), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC &apos;25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-content">
-                <h3>DIS – Study Abroad in Copenhagen</h3>
-                <p className="education-degree">UT Global Ambassador</p>
-                <p className="education-details">Copenhagen &middot; Field research on Scandinavian health systems and tech-enabled care models &middot; Aug – Dec 2024</p>
+                <h3>Danish Institute for Study Abroad</h3>
+                <p className="education-degree">UT Global Ambassador &middot; Copenhagen</p>
+                <p className="education-details">Hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug to Dec 2024</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-content">
                 <h3>Y Combinator</h3>
                 <p className="education-degree">AI Startup School</p>
-                <p className="education-details">Selective cohort on building AI-native companies &middot; Jun – Jul 2025</p>
+                <p className="education-details">Selective cohort on building AI-native companies &middot; Jun to Jul 2025</p>
               </div>
             </div>
           </div>
@@ -378,13 +377,13 @@ function App() {
           <section id="experience" className="section">
             <h2>Experience</h2>
             <div className="entry-list">
-              <div className="entry-item entry-incoming">
+              <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>Incoming SWE Intern – Global Technology <span className="incoming-badge">Summer 2026</span></h3>
+                    <h3>SWE Intern, Global Technology</h3>
                     <span className="entry-company">Bank of America</span>
                   </div>
-                  <span className="entry-date">Pennington, NJ</span>
+                  <span className="entry-date">June 2026 to Present &middot; Pennington, NJ</span>
                 </div>
               </div>
 
@@ -394,14 +393,14 @@ function App() {
                     <h3>Founder &amp; Director</h3>
                     <span className="entry-company">
                       <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
-                        Hook 'Em Hacks – UT Austin
+                        Hook &apos;Em Hacks at UT Austin
                       </a>
                     </span>
                   </div>
-                  <span className="entry-date">November 2025 – Present</span>
+                  <span className="entry-date">November 2025 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Lead an AI-focused hackathon — 250+ builders, 25+ mentors, $10K+ in prizes</li>
+                  <li>Lead an AI-focused hackathon with 250+ builders, 25+ mentors, and $10K+ in prizes</li>
                   <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
                   <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
                 </ul>
@@ -413,24 +412,27 @@ function App() {
                     <h3>Austin City Lead</h3>
                     <span className="entry-company">Hack48</span>
                   </div>
-                  <span className="entry-date">January 2026 – Present</span>
+                  <span className="entry-date">January 2026 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Organizing Austin&apos;s first Gen-Z hacker house — space for builders and innovators</li>
+                  <li>Organizing Austin&apos;s first Gen-Z hacker house for builders and innovators</li>
                 </ul>
               </div>
 
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>Undergraduate Researcher – Multimodal AI</h3>
-                    <span className="entry-company">SounDIT – GiSense Lab – UT Austin</span>
+                    <h3>Undergraduate Researcher, Multimodal AI</h3>
+                    <span className="entry-company">Soundscape-to-Image Lab, UT Austin</span>
                   </div>
-                  <span className="entry-date">August 2025 – Present</span>
+                  <span className="entry-date">August 2025 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Developed and optimized Python/PyTorch pipelines for audio-to-image generation; improved model accuracy through fine-tuning and rigorous evaluation</li>
+                  <li>Built and debugged Python/PyTorch pipelines for multimodal data preprocessing (audio, frames, metadata)</li>
+                  <li>Developed and optimized audio-to-image generation workflows; improved model accuracy through fine-tuning and rigorous evaluation</li>
+                  <li>Ran inference on pretrained audio models to generate and validate embeddings</li>
                   <li>Automated dataset curation workflows to cut prep time and scale experiments</li>
+                  <li>Prepared curated datasets and training configurations to support downstream fine-tuning experiments</li>
                   <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
                 </ul>
               </div>
@@ -438,15 +440,15 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>IT Internal Audit Intern</h3>
-                    <span className="entry-company">The Depository Trust & Clearing Corporation (DTCC)</span>
+                    <h3>IT Intern, Internal Audit &amp; Data Analytics</h3>
+                    <span className="entry-company">The Depository Trust &amp; Clearing Corporation (DTCC)</span>
                   </div>
-                  <span className="entry-date">June 2025 – August 2025</span>
+                  <span className="entry-date">May 2025 to August 2025 &middot; Jersey City, NJ</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Delivered automation in Python and KNIME across three audit teams</li>
-                  <li>Shipped a KNIME Business Hub app that unified fragmented audit workflows</li>
-                  <li>Contributed to ML prototyping and AI governance documentation for audit use cases</li>
+                  <li>Automated audit test matrix generation in KNIME/Python, saving 10-15 hours per audit and scaling across recurring workflows</li>
+                  <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
+                  <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
                 </ul>
               </div>
 
@@ -458,7 +460,7 @@ function App() {
                         <h3>Campus Ambassador</h3>
                         <span className="entry-company">Perplexity</span>
                       </div>
-                      <span className="entry-date">September 2025 – February 2026</span>
+                      <span className="entry-date">September 2025 to February 2026</span>
                     </div>
                     <ul className="entry-details">
                       <li>Drove adoption of Perplexity on campus through demos, workshops, and office hours</li>
@@ -472,10 +474,10 @@ function App() {
                         <h3>AI Extern</h3>
                         <span className="entry-company">UT Austin WiSTEM</span>
                       </div>
-                      <span className="entry-date">December 2025 – January 2026</span>
+                      <span className="entry-date">December 2025 to January 2026</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Winter 2025 externship focused on AI and semiconductor technologies — labs, talks, and applied projects</li>
+                      <li>Winter 2025 externship focused on AI and semiconductor technologies through labs, talks, and applied projects</li>
                     </ul>
                   </div>
 
@@ -485,7 +487,7 @@ function App() {
                         <h3>Growth Intern</h3>
                         <span className="entry-company">Fetii</span>
                       </div>
-                      <span className="entry-date">August 2025 – November 2025</span>
+                      <span className="entry-date">August 2025 to November 2025</span>
                     </div>
                     <ul className="entry-details">
                       <li>Supported growth and GTM for an Austin-based ride-sharing startup</li>
@@ -496,13 +498,26 @@ function App() {
                     <div className="entry-header">
                       <div>
                         <h3>AI Agent Builder Intern</h3>
-                        <span className="entry-company">NeuralSeek – Remote</span>
+                        <span className="entry-company">NeuralSeek (Remote)</span>
                       </div>
-                      <span className="entry-date">August 2025 – September 2025</span>
+                      <span className="entry-date">August 2025 to September 2025</span>
                     </div>
                     <ul className="entry-details">
-                      <li>Built and deployed production AI agents with modular architecture for enterprise workflow automation</li>
-                      <li>Benchmarked generative AI platforms and fed insights into product direction</li>
+                      <li>Built and deployed a custom AI agent on NeuralSeek&apos;s low-code platform, creating a portfolio-ready enterprise workflow tool</li>
+                      <li>Delivered a competitive analysis of generative AI platforms, influencing product roadmap and market positioning</li>
+                    </ul>
+                  </div>
+
+                  <div className="entry-item">
+                    <div className="entry-header">
+                      <div>
+                        <h3>Product &amp; Tech Intern</h3>
+                        <span className="entry-company">Jetson Financial (Remote)</span>
+                      </div>
+                      <span className="entry-date">May 2023 to September 2023</span>
+                    </div>
+                    <ul className="entry-details">
+                      <li>Conducted UX research and usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
                     </ul>
                   </div>
 
@@ -512,7 +527,7 @@ function App() {
                         <h3>Operations &amp; Technology</h3>
                         <span className="entry-company">Kupid Dating</span>
                       </div>
-                      <span className="entry-date">January 2025 – January 2026</span>
+                      <span className="entry-date">January 2025 to January 2026</span>
                     </div>
                     <ul className="entry-details">
                       <li>Ran finances, logistics, and ops for multi-campus tours (UT Austin, UT Dallas, A&amp;M, UIUC, Rutgers)</li>
@@ -539,6 +554,34 @@ function App() {
         <section id="projects" className="section fade-in-section">
           <h2>Featured Projects</h2>
           <div className="projects-grid stagger-children fade-in-section">
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>SymptomSync</h3>
+                <span className="project-tag">AI/Healthcare</span>
+              </div>
+              <p>Clinical NLP triage assistant using HF Transformers and PyTorch for symptom extraction and diagnosis inference. Simulates real-world triage workflows.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>PyTorch</span>
+                <span>HuggingFace</span>
+              </div>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>AI-Driven Cardiac Risk Classifier</h3>
+                <span className="project-tag">ML/Healthcare</span>
+              </div>
+              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
+              <div className="project-tech">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Pandas</span>
+                <span>EHR Analysis</span>
+              </div>
+            </div>
+
             <div
               className="project-card research-map-card"
               style={{ cursor: 'pointer' }}
@@ -562,34 +605,6 @@ function App() {
                 <span>Research</span>
                 <span>Policy Analysis</span>
                 <span>Mixed Methods</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>SymptomSync</h3>
-                <span className="project-tag">AI/Healthcare</span>
-              </div>
-              <p>Clinical NLP triage assistant using HF Transformers + PyTorch for symptom extraction and diagnosis inference.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>NLP</span>
-                <span>PyTorch</span>
-                <span>HuggingFace</span>
-              </div>
-            </div>
-
-            <div className="project-card" onMouseMove={handleCardMouseMove}>
-              <div className="project-header">
-                <h3>AI-Driven Cardiac Risk Classifier</h3>
-                <span className="project-tag">ML/Healthcare</span>
-              </div>
-              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
-              <div className="project-tech">
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Pandas</span>
-                <span>EHR Analysis</span>
               </div>
             </div>
 
@@ -733,10 +748,10 @@ function App() {
           <div className="projects-grid stagger-children fade-in-section">
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
-                <h3>1st Place – Marshall Wace Category</h3>
+                <h3>1st Place, Marshall Wace Category</h3>
                 <span className="project-tag">Hack @ Brown</span>
               </div>
-              <p>Earned top honors in the Marshall Wace sponsored category at Brown University's hackathon (February 2026).</p>
+              <p>Earned top honors in the Marshall Wace sponsored category at Brown University&apos;s hackathon (February 2026).</p>
             </div>
 
             <div className="project-card" onMouseMove={handleCardMouseMove}>
@@ -744,15 +759,31 @@ function App() {
                 <h3>Best Use of Gemini API</h3>
                 <span className="project-tag">Hack @ Brown</span>
               </div>
-              <p>Recognized for innovative application of Google's Gemini API at Hack @ Brown (February 2026).</p>
+              <p>Recognized for innovative application of Google&apos;s Gemini API at Hack @ Brown (February 2026).</p>
             </div>
 
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
-                <h3>Best Use of Hedera</h3>
-                <span className="project-tag">Technica – UMD</span>
+                <h3>1st Place, Best Use of Cryptocurrency</h3>
+                <span className="project-tag">Technica at UMD</span>
               </div>
-              <p>Built on Hedera; recognized for technical execution and innovation at UMD&apos;s women-focused hackathon.</p>
+              <p>Top prize for cryptocurrency integration at UMD&apos;s women-focused hackathon.</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>1st Place, Data Visualization</h3>
+                <span className="project-tag">South Brunswick Hackathon</span>
+              </div>
+              <p>Competed with 40+ teams and presented innovative data insights to Bloomberg employees.</p>
+            </div>
+
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Best Hack for Social Good</h3>
+                <span className="project-tag">Bridgewater-Raritan Hacks</span>
+              </div>
+              <p>Created an impactful solution addressing social challenges in the community.</p>
             </div>
           </div>
         </section>
@@ -769,10 +800,10 @@ function App() {
             <div className="entry-item">
               <div className="entry-header">
                 <div>
-                  <h3>Designer &amp; Product Fellow</h3>
-                  <span className="entry-company">Longhorn Developers – UT Registration Plus</span>
+                  <h3>Designer &amp; UX Design Fellow</h3>
+                  <span className="entry-company">Longhorn Developers &amp; UX Design Club, UT Registration Plus</span>
                 </div>
-                <span className="entry-date">March 2025 – Present</span>
+                <span className="entry-date">March 2025 to Present</span>
               </div>
               <ul className="entry-details">
                 <li>Redesigned core UI in Figma, improving course planning efficiency by 20%</li>
@@ -781,30 +812,30 @@ function App() {
               </ul>
             </div>
 
+            <div className="entry-item">
+              <div className="entry-header">
+                <div>
+                  <h3>Co-founder &amp; Advisory Panel Lead</h3>
+                  <span className="entry-company">Students for Ethical Use of Technology</span>
+                </div>
+                <span className="entry-date">December 2024 to Present</span>
+              </div>
+              <ul className="entry-details">
+                <li>Launched application process and advisory panel for student-led ethical tech initiatives</li>
+                <li>Promote responsible AI development and ethical technology practices on campus</li>
+                <li>Organize workshops and discussions on AI ethics and responsible innovation</li>
+              </ul>
+            </div>
+
             {showMoreLeadership && (
               <>
                 <div className="entry-item">
                   <div className="entry-header">
                     <div>
-                      <h3>Co-founder & Advisory Panel Lead</h3>
-                      <span className="entry-company">Students for Ethical Use of Technology</span>
-                    </div>
-                    <span className="entry-date">December 2024 – Present</span>
-                  </div>
-                  <ul className="entry-details">
-                    <li>Launched application process and advisory panel for student-led ethical tech initiatives</li>
-                    <li>Promote responsible AI development and ethical technology practices on campus</li>
-                    <li>Organize workshops and discussions on AI ethics and responsible innovation</li>
-                  </ul>
-                </div>
-
-                <div className="entry-item">
-                  <div className="entry-header">
-                    <div>
-                      <h3>Community Engagement & Advocacy Agency</h3>
+                      <h3>Community Engagement &amp; Advocacy Agency</h3>
                       <span className="entry-company">UT Austin Student Government</span>
                     </div>
-                    <span className="entry-date">January 2025 – Present</span>
+                    <span className="entry-date">January 2025 to Present</span>
                   </div>
                   <ul className="entry-details">
                     <li>Represent student voice on community engagement; turn feedback into programming and campus events</li>
@@ -816,9 +847,9 @@ function App() {
                   <div className="entry-header">
                     <div>
                       <h3>Texas Global Ambassador</h3>
-                      <span className="entry-company">Texas Global – UT Austin</span>
+                      <span className="entry-company">Texas Global, UT Austin</span>
                     </div>
-                    <span className="entry-date">August 2024 – January 2025</span>
+                    <span className="entry-date">August 2024 to January 2025</span>
                   </div>
                   <ul className="entry-details">
                     <li>Created compelling Instagram stories to encourage students to study abroad</li>
@@ -832,7 +863,7 @@ function App() {
                       <h3>Youth Ambassador Team Lead</h3>
                       <span className="entry-company">JDRF International</span>
                     </div>
-                    <span className="entry-date">2018 – 2024</span>
+                    <span className="entry-date">2018 to 2024</span>
                   </div>
                   <ul className="entry-details">
                     <li>Led 30+ fundraisers raising $50k+ for T1D research over 6 years</li>
@@ -844,10 +875,10 @@ function App() {
                 <div className="entry-item">
                   <div className="entry-header">
                     <div>
-                      <h3>NJ Political Director & Co-founder</h3>
+                      <h3>NJ Political Director &amp; Co-founder</h3>
                       <span className="entry-company">High School Democrats of America</span>
                     </div>
-                    <span className="entry-date">2021 – 2024</span>
+                    <span className="entry-date">2021 to 2024</span>
                   </div>
                   <ul className="entry-details">
                     <li>Led voting campaigns and coordinated events among 15+ schools</li>
@@ -877,7 +908,7 @@ function App() {
             <div className="publication-content">
               <h3>"Dismantling Algorithmic Prejudice: Safeguarding Equity and Ethical Deliberation in A.I."</h3>
               <p className="publication-details">Greenhouse Publishing &middot; December 5, 2023</p>
-              <p>Essay on algorithmic fairness, equity, and ethical deliberation in deployed AI systems — how bias propagates and what safeguards matter.</p>
+              <p>Theoretical exploration of bias detection, mitigation, and fairness in AI systems, with insights into AI ethics, responsible innovation, and societal impact.</p>
             </div>
           </div>
         </section>
@@ -906,7 +937,7 @@ function App() {
             </div>
             <div className="award-item">
               <div className="award-content">
-                <h3>VEX Robotics Innovate & Design Award</h3>
+                <h3>VEX Robotics Innovate &amp; Design Award</h3>
                 <p>Earned prestigious robotics award competing against 50+ teams at state level</p>
               </div>
             </div>
@@ -931,7 +962,7 @@ function App() {
             </div>
             <div className="award-item">
               <div className="award-content">
-                <h3>KNIME Level 1 – Associate Certification</h3>
+                <h3>KNIME Level 1, Associate Certification</h3>
                 <p>KNIME &middot; Issued June 2025</p>
               </div>
             </div>
@@ -960,7 +991,7 @@ function App() {
         <section className="cta-hero fade-in-section">
           <div className="cta-hero-inner">
             <h2 className="cta-hero-heading">Have an idea?<br />Let&apos;s make it real.</h2>
-            <p className="cta-hero-sub">Research collaborations, internships, hackathons, or something weird at the edge of AI — I&apos;m easy to reach.</p>
+            <p className="cta-hero-sub">Research collaborations, internships, hackathons, or something weird at the edge of AI. I&apos;m easy to reach.</p>
             <div className="cta-hero-actions">
               <a href="mailto:maanyac17@utexas.edu" className="btn-primary">Say Hello</a>
               <a href="https://calendly.com/maanyachugh17/30-minute-meeting-clone" className="btn-secondary" target="_blank" rel="noopener noreferrer">Book a Meeting</a>
