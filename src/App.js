@@ -268,7 +268,7 @@ function App() {
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
                 IT student at UT Austin, specializing in Human-Centered Data Science. I build RAG and agentic AI systems at Tesla and Bank of America, research multimodal ML at the
-                Soundscape-to-Image Lab, and run Hook &apos;Em Hacks.
+                GiSense Lab, and run Hook &apos;Em Hacks.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
@@ -317,7 +317,7 @@ function App() {
             </div>
             <div className="about-body">
               <p className="about-lede">
-                I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In UT Austin&apos;s Soundscape-to-Image Lab that means
+                I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In UT Austin&apos;s GiSense Lab that means
                 running experiments across 12,000+ samples, fine-tuning models, and building reproducible preprocessing and evaluation pipelines.
               </p>
               <p className="about-follow">
@@ -432,8 +432,81 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
+                    <h3>Austin City Lead</h3>
+                    <span className="entry-company">Hack48</span>
+                  </div>
+                  <span className="entry-date">January 2026 to Present</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Organizing Austin&apos;s first Gen-Z hacker house for builders and innovators</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>AI Extern</h3>
+                    <span className="entry-company">UT Austin WiSTEM</span>
+                  </div>
+                  <span className="entry-date">December 2025 to January 2026</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Winter 2025 externship focused on AI and semiconductor technologies through labs, talks, and applied projects</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>Operations &amp; Technology</h3>
+                    <span className="entry-company">Kupid Dating</span>
+                  </div>
+                  <span className="entry-date">January 2025 to January 2026</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Ran finances, logistics, and ops for multi-campus tours (UT Austin, UT Dallas, A&amp;M, UIUC, Rutgers)</li>
+                  <li>Built internal workflows and lightweight tooling for events and coordination</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>Founder &amp; Director</h3>
+                    <span className="entry-company">
+                      <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
+                        Hook &apos;Em Hacks at UT Austin
+                      </a>
+                    </span>
+                  </div>
+                  <span className="entry-date">September 2025 to Present</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
+                  <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
+                  <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>Campus Ambassador</h3>
+                    <span className="entry-company">Perplexity</span>
+                  </div>
+                  <span className="entry-date">September 2025 to February 2026</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Drove adoption of Perplexity on campus through demos, workshops, and office hours</li>
+                  <li>Connected students and orgs with AI-powered research and productivity workflows</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
                     <h3>Undergraduate Researcher, Multimodal AI</h3>
-                    <span className="entry-company">Soundscape-to-Image Lab, UT Austin</span>
+                    <span className="entry-company">GiSense Lab, UT Austin</span>
                   </div>
                   <span className="entry-date">August 2025 to Present</span>
                 </div>
@@ -441,6 +514,33 @@ function App() {
                   <li>Designed and ran multimodal experiments across nearly 12,000 samples, evaluating audio, visual, text, and spatial features through ablation studies and achieving an R&sup2; of 0.63</li>
                   <li>Fine-tuned models and optimized feature pipelines, hyperparameters, and training configurations, improving predictive performance by 10% and building automated preprocessing and evaluation workflows</li>
                   <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>Growth Intern</h3>
+                    <span className="entry-company">Fetii</span>
+                  </div>
+                  <span className="entry-date">August 2025 to November 2025</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Supported growth and GTM for an Austin-based ride-sharing startup</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>AI Agent Builder Intern</h3>
+                    <span className="entry-company">NeuralSeek (Remote)</span>
+                  </div>
+                  <span className="entry-date">August 2025 to September 2025</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Built and deployed a custom AI agent on NeuralSeek&apos;s low-code platform, creating a portfolio-ready enterprise workflow tool</li>
+                  <li>Delivered a competitive analysis of generative AI platforms, influencing product roadmap and market positioning</li>
                 </ul>
               </div>
 
@@ -464,92 +564,6 @@ function App() {
                   <div className="entry-item">
                     <div className="entry-header">
                       <div>
-                        <h3>Founder &amp; Director</h3>
-                        <span className="entry-company">
-                          <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
-                            Hook &apos;Em Hacks at UT Austin
-                          </a>
-                        </span>
-                      </div>
-                      <span className="entry-date">September 2025 to Present</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
-                      <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
-                      <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Austin City Lead</h3>
-                        <span className="entry-company">Hack48</span>
-                      </div>
-                      <span className="entry-date">January 2026 to Present</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Organizing Austin&apos;s first Gen-Z hacker house for builders and innovators</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Campus Ambassador</h3>
-                        <span className="entry-company">Perplexity</span>
-                      </div>
-                      <span className="entry-date">September 2025 to February 2026</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Drove adoption of Perplexity on campus through demos, workshops, and office hours</li>
-                      <li>Connected students and orgs with AI-powered research and productivity workflows</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>AI Extern</h3>
-                        <span className="entry-company">UT Austin WiSTEM</span>
-                      </div>
-                      <span className="entry-date">December 2025 to January 2026</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Winter 2025 externship focused on AI and semiconductor technologies through labs, talks, and applied projects</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Growth Intern</h3>
-                        <span className="entry-company">Fetii</span>
-                      </div>
-                      <span className="entry-date">August 2025 to November 2025</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Supported growth and GTM for an Austin-based ride-sharing startup</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>AI Agent Builder Intern</h3>
-                        <span className="entry-company">NeuralSeek (Remote)</span>
-                      </div>
-                      <span className="entry-date">August 2025 to September 2025</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Built and deployed a custom AI agent on NeuralSeek&apos;s low-code platform, creating a portfolio-ready enterprise workflow tool</li>
-                      <li>Delivered a competitive analysis of generative AI platforms, influencing product roadmap and market positioning</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
                         <h3>Product &amp; Tech Intern</h3>
                         <span className="entry-company">Jetson Financial (Remote)</span>
                       </div>
@@ -557,20 +571,6 @@ function App() {
                     </div>
                     <ul className="entry-details">
                       <li>Conducted UX research and usability testing across multiple product flows, leading to a 20% increase in user satisfaction</li>
-                    </ul>
-                  </div>
-
-                  <div className="entry-item">
-                    <div className="entry-header">
-                      <div>
-                        <h3>Operations &amp; Technology</h3>
-                        <span className="entry-company">Kupid Dating</span>
-                      </div>
-                      <span className="entry-date">January 2025 to January 2026</span>
-                    </div>
-                    <ul className="entry-details">
-                      <li>Ran finances, logistics, and ops for multi-campus tours (UT Austin, UT Dallas, A&amp;M, UIUC, Rutgers)</li>
-                      <li>Built internal workflows and lightweight tooling for events and coordination</li>
                     </ul>
                   </div>
                 </>
