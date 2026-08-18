@@ -19,6 +19,18 @@ const MARQUEE_SKILLS = [
   'Machine Learning', 'Human-Centered Data Science', 'Figma', 'Tableau'
 ];
 
+const NAV_LINKS = [
+  { id: 'hero', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'hackathons', label: 'Hackathons' },
+  { id: 'leadership', label: 'Leadership' },
+  { id: 'publications', label: 'Publications' },
+  { id: 'awards', label: 'Awards' },
+  { id: 'contact', label: 'Contact' },
+];
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +46,7 @@ function App() {
   const [typePhase, setTypePhase] = useState('typing-in');
 
   const [statsVisible, setStatsVisible] = useState(false);
-  const [statValues, setStatValues] = useState({ gpa: 0, awards: 0, projects: 0 });
+  const [statValues, setStatValues] = useState({ gpa: 0, hackathon: 0, internships: 0 });
   const [statsDone, setStatsDone] = useState(false);
   const statsRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -65,7 +77,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -137,14 +149,14 @@ function App() {
   useEffect(() => {
     if (statsVisible) {
       animateStat(3.8, 'gpa', 1200, true);
-      animateStat(5, 'awards', 1000, false);
-      animateStat(18, 'projects', 1400, false);
+      animateStat(250, 'hackathon', 1000, false);
+      animateStat(2, 'internships', 1000, false);
     }
   }, [statsVisible, animateStat]);
 
   // Active nav section tracking
   useEffect(() => {
-    const sectionIds = ['hero', 'about', 'education', 'experience', 'projects', 'skills', 'hackathons', 'leadership', 'contact'];
+    const sectionIds = NAV_LINKS.map(link => link.id);
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -195,13 +207,11 @@ function App() {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="logo">Maanya Chugh</div>
         <ul className="nav-links">
-          <li><a href="#hero" className={activeSection === 'hero' ? 'active' : ''}>Home</a></li>
-          <li><a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a></li>
-          <li><a href="#education" className={activeSection === 'education' ? 'active' : ''}>Education</a></li>
-          <li><a href="#experience" className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
-          <li><a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
-          <li><a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a></li>
-          <li><a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
+          {NAV_LINKS.map(link => (
+            <li key={link.id}>
+              <a href={`#${link.id}`} className={activeSection === link.id ? 'active' : ''}>{link.label}</a>
+            </li>
+          ))}
         </ul>
         <div className="nav-right">
           <a href="/Maanya_Chugh_Resume.pdf" className="btn-resume" target="_blank" rel="noopener noreferrer">
@@ -222,13 +232,9 @@ function App() {
         <div className="mobile-menu-overlay" onClick={closeMenu}>
           <div className="mobile-menu" onClick={e => e.stopPropagation()}>
             <button className="mobile-menu-close" onClick={closeMenu} aria-label="Close menu">&times;</button>
-            <a href="#hero" onClick={closeMenu}>Home</a>
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a href="#education" onClick={closeMenu}>Education</a>
-            <a href="#experience" onClick={closeMenu}>Experience</a>
-            <a href="#projects" onClick={closeMenu}>Projects</a>
-            <a href="#skills" onClick={closeMenu}>Skills</a>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+            {NAV_LINKS.map(link => (
+              <a key={link.id} href={`#${link.id}`} onClick={closeMenu}>{link.label}</a>
+            ))}
             <a href="/Maanya_Chugh_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Resume</a>
           </div>
         </div>
@@ -243,8 +249,8 @@ function App() {
               <h1 className="hero-title">Maanya Chugh</h1>
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
-                IT student at UT Austin, specializing in Human-Centered Data Science. AI PM intern at Tesla, SWE intern at Bank of America this summer, researching multimodal AI at the
-                Soundscape-to-Image Lab, and running Hook &apos;Em Hacks.
+                IT student at UT Austin, specializing in Human-Centered Data Science. I build RAG and agentic AI systems at Tesla and Bank of America, research multimodal ML at the
+                Soundscape-to-Image Lab, and run Hook &apos;Em Hacks.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
@@ -262,7 +268,7 @@ function App() {
             </div>
             <div className="hero-image">
               <div className="profile-container">
-                <img src={heroPhoto} alt="Maanya Chugh" className="profile-pic" />
+                <img src={heroPhoto} alt="Maanya Chugh" className="profile-pic" fetchPriority="high" />
               </div>
             </div>
           </div>
@@ -289,7 +295,7 @@ function App() {
           <h2>About Me</h2>
           <div className="about-layout">
             <div className="about-photo">
-              <img src={aboutPhoto} alt="Maanya Chugh" />
+              <img src={aboutPhoto} alt="Maanya Chugh" loading="lazy" decoding="async" />
             </div>
             <div className="about-body">
               <p className="about-lede">
@@ -307,12 +313,12 @@ function App() {
                   <span className="stat-label">GPA</span>
                 </div>
                 <div className="stat-item">
-                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? `${statValues.awards}+` : '0'}</span>
-                  <span className="stat-label">Awards</span>
+                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? `${statValues.hackathon}+` : '0'}</span>
+                  <span className="stat-label">Hackathon Builders</span>
                 </div>
                 <div className="stat-item">
-                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? `${statValues.projects}+` : '0'}</span>
-                  <span className="stat-label">Projects</span>
+                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? statValues.internships : '0'}</span>
+                  <span className="stat-label">Fortune 500 Internships</span>
                 </div>
               </div>
             </div>
@@ -365,10 +371,10 @@ function App() {
         {/* Photo break — diptych */}
         <div className="photo-diptych fade-in-section">
           <div className="diptych-img">
-            <img src={breakPhoto1} alt="" />
+            <img src={breakPhoto1} alt="" loading="lazy" decoding="async" />
           </div>
           <div className="diptych-img">
-            <img src={breakPhoto2} alt="" />
+            <img src={breakPhoto2} alt="" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -408,38 +414,6 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>Founder &amp; Director</h3>
-                    <span className="entry-company">
-                      <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
-                        Hook &apos;Em Hacks at UT Austin
-                      </a>
-                    </span>
-                  </div>
-                  <span className="entry-date">September 2025 to Present</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
-                  <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
-                  <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
-                    <h3>Austin City Lead</h3>
-                    <span className="entry-company">Hack48</span>
-                  </div>
-                  <span className="entry-date">January 2026 to Present</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Organizing Austin&apos;s first Gen-Z hacker house for builders and innovators</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
                     <h3>Undergraduate Researcher, Multimodal AI</h3>
                     <span className="entry-company">Soundscape-to-Image Lab, UT Austin</span>
                   </div>
@@ -469,6 +443,38 @@ function App() {
 
               {showMoreExperience && (
                 <>
+                  <div className="entry-item">
+                    <div className="entry-header">
+                      <div>
+                        <h3>Founder &amp; Director</h3>
+                        <span className="entry-company">
+                          <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
+                            Hook &apos;Em Hacks at UT Austin
+                          </a>
+                        </span>
+                      </div>
+                      <span className="entry-date">September 2025 to Present</span>
+                    </div>
+                    <ul className="entry-details">
+                      <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
+                      <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
+                      <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
+                    </ul>
+                  </div>
+
+                  <div className="entry-item">
+                    <div className="entry-header">
+                      <div>
+                        <h3>Austin City Lead</h3>
+                        <span className="entry-company">Hack48</span>
+                      </div>
+                      <span className="entry-date">January 2026 to Present</span>
+                    </div>
+                    <ul className="entry-details">
+                      <li>Organizing Austin&apos;s first Gen-Z hacker house for builders and innovators</li>
+                    </ul>
+                  </div>
+
                   <div className="entry-item">
                     <div className="entry-header">
                       <div>
@@ -562,13 +568,27 @@ function App() {
 
         {/* Photo break — B&W city */}
         <div className="photo-break fade-in-section">
-          <img src={cityPhoto} alt="" />
+          <img src={cityPhoto} alt="" loading="lazy" decoding="async" />
         </div>
 
         {/* Projects */}
         <section id="projects" className="section fade-in-section">
           <h2>Featured Projects</h2>
           <div className="projects-grid stagger-children fade-in-section">
+            <div className="project-card" onMouseMove={handleCardMouseMove}>
+              <div className="project-header">
+                <h3>Enterprise RAG Platform</h3>
+                <span className="project-tag">RAG / MongoDB</span>
+              </div>
+              <p>Built production RAG systems at Bank of America and Tesla: ingested 1000+ multi-format internal documents, MongoDB vector search, and AI-assisted workflows that automated 40% of manual tasks and cut operational latency by 25%.</p>
+              <div className="project-tech">
+                <span>MongoDB</span>
+                <span>RAG</span>
+                <span>Python</span>
+                <span>Vector Search</span>
+              </div>
+            </div>
+
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
                 <h3>AI-Driven Cardiac Risk Classifier</h3>
@@ -733,15 +753,15 @@ function App() {
 
             <div className="tech-showcase">
               <div className="tech-grid">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" loading="lazy" decoding="async" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" loading="lazy" decoding="async" />
               </div>
             </div>
           </section>
@@ -750,10 +770,10 @@ function App() {
         {/* Photo diptych — Swiss village + Copenhagen */}
         <div className="photo-diptych fade-in-section">
           <div className="diptych-img">
-            <img src={villagePhoto} alt="" />
+            <img src={villagePhoto} alt="" loading="lazy" decoding="async" />
           </div>
           <div className="diptych-img">
-            <img src={copenhagenPhoto} alt="" />
+            <img src={copenhagenPhoto} alt="" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -805,7 +825,7 @@ function App() {
 
         {/* Photo break — sunset */}
         <div className="photo-break fade-in-section">
-          <img src={sunsetPhoto} alt="" />
+          <img src={sunsetPhoto} alt="" loading="lazy" decoding="async" />
         </div>
 
         {/* Leadership */}
@@ -913,7 +933,7 @@ function App() {
 
         {/* Photo break — resort */}
         <div className="photo-break fade-in-section">
-          <img src={beachPhoto} alt="" style={{ objectPosition: 'center 35%' }} />
+          <img src={beachPhoto} alt="" loading="lazy" decoding="async" style={{ objectPosition: 'center 35%' }} />
         </div>
 
         {/* Publications */}
@@ -1046,7 +1066,14 @@ function App() {
                 </div>
               </div>
               <div className="contact-right">
-                <form className="contact-form" onSubmit={e => { e.preventDefault(); alert('Thank you for reaching out! I\'ll get back to you soon.'); }}>
+                <form
+                  className="contact-form"
+                  action="https://formsubmit.co/maanyac17@utexas.edu"
+                  method="POST"
+                >
+                  <input type="hidden" name="_subject" value="New portfolio message" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://www.maanyachugh.info/#contact" />
                   <input type="text" name="name" placeholder="Your Name" required />
                   <input type="email" name="email" placeholder="Your Email" required />
                   <textarea name="message" placeholder="Your Message" required></textarea>

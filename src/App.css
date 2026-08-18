@@ -136,15 +136,17 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.1rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   transition: color 0.2s ease;
