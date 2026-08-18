@@ -13,10 +13,10 @@ import { createPortal } from 'react-dom';
 
 /** Ticker after About — aligned with Skills & Technologies + your stack */
 const MARQUEE_SKILLS = [
-  'Python', 'PyTorch', 'TensorFlow', 'Java', 'JavaScript', 'C++', 'SQL', 'HTML/CSS',
-  'React', 'Flask', 'FastAPI', 'Git', 'Linux', 'Pandas', 'NumPy', 'Scikit-learn',
-  'NLP', 'Hugging Face', 'KNIME', 'Multimodal AI', 'Geospatial AI', 'Agentic AI',
-  'Kotlin', 'Swift', 'Android Studio', 'Machine Learning', 'Human-Centered Data Science', 'Figma'
+  'Python', 'PyTorch', 'Java', 'C#', 'C++', 'JavaScript', 'SQL', 'HTML/CSS',
+  'React', 'Flask', 'MongoDB', 'RAG', 'Git', 'KNIME', 'Unity',
+  'NLP', 'Multimodal AI', 'Kotlin', 'Swift', 'Android Studio',
+  'Machine Learning', 'Human-Centered Data Science', 'Figma', 'Tableau'
 ];
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
   const [showResearchMap, setShowResearchMap] = useState(false);
   const [expandedPhase, setExpandedPhase] = useState(null);
 
-  const roles = ['AI Engineer', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
+  const roles = ['AI PM', 'AI Engineer', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [typePhase, setTypePhase] = useState('typing-in');
 
@@ -136,7 +136,7 @@ function App() {
 
   useEffect(() => {
     if (statsVisible) {
-      animateStat(4.0, 'gpa', 1200, true);
+      animateStat(3.8, 'gpa', 1200, true);
       animateStat(5, 'awards', 1000, false);
       animateStat(18, 'projects', 1400, false);
     }
@@ -243,7 +243,7 @@ function App() {
               <h1 className="hero-title">Maanya Chugh</h1>
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
-                IT student at UT Austin, specializing in Human-Centered Data Science. SWE intern at Bank of America, researching multimodal AI at the
+                IT student at UT Austin, specializing in Human-Centered Data Science. AI PM intern at Tesla, SWE intern at Bank of America this summer, researching multimodal AI at the
                 Soundscape-to-Image Lab, and running Hook &apos;Em Hacks.
               </p>
               <div className="hero-cta">
@@ -273,13 +273,13 @@ function App() {
           <span className="currently-label">Currently</span>
           <div className="currently-items">
             <div className="currently-item">
-              <span className="currently-emoji" role="img" aria-label="building">&#9881;</span> Building <strong>Hook 'Em Hacks</strong>
+              <span className="currently-emoji" role="img" aria-label="work">&#128188;</span> AI PM Intern at <strong>Tesla</strong>
+            </div>
+            <div className="currently-item">
+              <span className="currently-emoji" role="img" aria-label="building">&#9881;</span> Building <strong>Hook &apos;Em Hacks</strong>
             </div>
             <div className="currently-item">
               <span className="currently-emoji" role="img" aria-label="research">&#128300;</span> Researching <strong>Multimodal AI</strong>
-            </div>
-            <div className="currently-item">
-              <span className="currently-emoji" role="img" aria-label="reading">&#128214;</span> Reading <strong>The Alignment Problem</strong> <span className="currently-book-author">Brian Christian</span>
             </div>
           </div>
         </div>
@@ -294,11 +294,11 @@ function App() {
             <div className="about-body">
               <p className="about-lede">
                 I work where <strong>multimodal AI</strong> meets <strong>shipped software</strong>. In UT Austin&apos;s Soundscape-to-Image Lab that means
-                PyTorch pipelines for audio, frames, and metadata: preprocessing, embeddings, and datasets that feed real experiments.
+                running experiments across 12,000+ samples, fine-tuning models, and building reproducible preprocessing and evaluation pipelines.
               </p>
               <p className="about-follow">
                 I run <strong>Hook &apos;Em Hacks</strong> end-to-end (sponsors, partnerships, ops) and help launch <strong>Hack48</strong>&apos;s Gen-Z hacker house in Austin.
-                I&apos;ve built with AI-stage startups, and I&apos;m an SWE intern at <strong>Bank of America</strong>.
+                I&apos;m an AI PM intern at <strong>Tesla</strong> and spent this summer as an SWE intern at <strong>Bank of America</strong>, building RAG platforms and production data workflows.
                 Open to research, collaborations, and opportunities where ML meets production systems.
               </p>
               <div className="about-stats" ref={statsRef}>
@@ -339,9 +339,9 @@ function App() {
             <div className="education-item">
               <div className="education-content">
                 <h3>University of Texas at Austin</h3>
-                <p className="education-degree">Bachelor of Science in Information Technology</p>
-                <p className="education-details">Specializing in Human-Centered Data Science &middot; Minor in Computer Science &middot; GPA: 4.0/4.0 &middot; Aug 2024 to May 2027</p>
-                <p className="education-details">Relevant Coursework: Data Structures, Mobile Application Development, Virtual Reality &amp; Game Design, Human-Centered Data Science, Ethical AI, UI/UX Design</p>
+                <p className="education-degree">Bachelor of Science in Information Technology (Honors)</p>
+                <p className="education-details">Specializing in Human-Centered Data Science &middot; GPA: 3.8/4.0 &middot; Expected graduation: Winter 2027</p>
+                <p className="education-details">Relevant Coursework: Data Structures, Applied Machine Learning with Python, Text Mining &amp; NLP Essentials, Mobile Application Development, Virtual Reality &amp; Game Design, Ethical AI, UI/UX Design</p>
                 <p className="education-details">Activities: Hook &apos;Em Hacks (Director), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC &apos;25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
               </div>
             </div>
@@ -349,7 +349,7 @@ function App() {
               <div className="education-content">
                 <h3>Danish Institute for Study Abroad</h3>
                 <p className="education-degree">UT Global Ambassador &middot; Copenhagen</p>
-                <p className="education-details">Hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug to Dec 2024</p>
+                <p className="education-details">Conducted hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug to Dec 2024</p>
               </div>
             </div>
             <div className="education-item">
@@ -380,11 +380,29 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
+                    <h3>AI PM Intern, Supply Chain Systems</h3>
+                    <span className="entry-company">Tesla</span>
+                  </div>
+                  <span className="entry-date">August 2026 to Present &middot; Fremont, CA</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Scaling an internal Retrieval-Augmented Generation (RAG) platform to support broader supply chain use cases by expanding its knowledge base without compromising retrieval accuracy</li>
+                  <li>Partnering with planners to identify new data sources and requirements, translating operational needs into reliable AI-assisted workflows</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
                     <h3>SWE Intern, Global Technology</h3>
                     <span className="entry-company">Bank of America</span>
                   </div>
-                  <span className="entry-date">June 2026 to Present &middot; Pennington, NJ</span>
+                  <span className="entry-date">May 2026 to August 2026 &middot; Pennington, NJ</span>
                 </div>
+                <ul className="entry-details">
+                  <li>Architected and deployed an enterprise RAG platform, ingesting 1000+ multi-format internal assets (PDFs, spreadsheets) to generate vector embeddings and leveraging MongoDB vector search to enable AI-powered retrieval and automate 40% of manual tasks</li>
+                  <li>Automated MongoDB operational workflows and data-processing pipelines, improving database platform scalability and reducing operational latency by 25%</li>
+                </ul>
               </div>
 
               <div className="entry-item">
@@ -397,10 +415,10 @@ function App() {
                       </a>
                     </span>
                   </div>
-                  <span className="entry-date">November 2025 to Present</span>
+                  <span className="entry-date">September 2025 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Lead an AI-focused hackathon with 250+ builders, 25+ mentors, and $10K+ in prizes</li>
+                  <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
                   <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
                   <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
                 </ul>
@@ -428,11 +446,8 @@ function App() {
                   <span className="entry-date">August 2025 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Built and debugged Python/PyTorch pipelines for multimodal data preprocessing (audio, frames, metadata)</li>
-                  <li>Developed and optimized audio-to-image generation workflows; improved model accuracy through fine-tuning and rigorous evaluation</li>
-                  <li>Ran inference on pretrained audio models to generate and validate embeddings</li>
-                  <li>Automated dataset curation workflows to cut prep time and scale experiments</li>
-                  <li>Prepared curated datasets and training configurations to support downstream fine-tuning experiments</li>
+                  <li>Designed and ran multimodal experiments across nearly 12,000 samples, evaluating audio, visual, text, and spatial features through ablation studies and achieving an R&sup2; of 0.63</li>
+                  <li>Fine-tuned models and optimized feature pipelines, hyperparameters, and training configurations, improving predictive performance by 10% and building automated preprocessing and evaluation workflows</li>
                   <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
                 </ul>
               </div>
@@ -446,9 +461,9 @@ function App() {
                   <span className="entry-date">May 2025 to August 2025 &middot; Jersey City, NJ</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Automated audit test matrix generation in KNIME/Python, saving 10-15 hours per audit and scaling across recurring workflows</li>
-                  <li>Built a KNIME Business Hub app that centralized disparate audit processes, streamlining collaboration across multiple audit teams</li>
-                  <li>Co-designed a custom ML model and contributed to AI governance policies, enhancing efficiency and trust in audit outcomes</li>
+                  <li>Engineered operational automation workflows using Python and KNIME, cutting audit cycle times by 25% and standardizing processes across 3 internal teams</li>
+                  <li>Designed and validated a machine-learning model to support operational decision-making, achieving 86% accuracy and contributing to enterprise AI governance standards</li>
+                  <li>Created and deployed a centralized KNIME Business Hub application to streamline audit processes, improving operational visibility and enabling coordination for 50+ users</li>
                 </ul>
               </div>
 
@@ -556,29 +571,28 @@ function App() {
           <div className="projects-grid stagger-children fade-in-section">
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
-                <h3>SymptomSync</h3>
-                <span className="project-tag">AI/Healthcare</span>
+                <h3>AI-Driven Cardiac Risk Classifier</h3>
+                <span className="project-tag">ML/Healthcare</span>
               </div>
-              <p>Clinical NLP triage assistant using HF Transformers and PyTorch for symptom extraction and diagnosis inference. Simulates real-world triage workflows.</p>
+              <p>Engineered machine learning pipelines on 10K+ EHRs, applying feature engineering to achieve 85% classification accuracy using Logistic Regression and Random Forest models. Streamlined data preprocessing stages to ensure fully reproducible workflows, reducing pipeline execution time by 30%.</p>
               <div className="project-tech">
                 <span>Python</span>
-                <span>NLP</span>
-                <span>PyTorch</span>
-                <span>HuggingFace</span>
+                <span>Scikit-learn</span>
+                <span>ML Pipelines</span>
+                <span>EHR Analysis</span>
               </div>
             </div>
 
             <div className="project-card" onMouseMove={handleCardMouseMove}>
               <div className="project-header">
-                <h3>AI-Driven Cardiac Risk Classifier</h3>
-                <span className="project-tag">ML/Healthcare</span>
+                <h3>SymptomSync</h3>
+                <span className="project-tag">Clinical NLP</span>
               </div>
-              <p>ML pipelines on 10k+ EHRs; achieved 85% prediction accuracy for cardiac risk assessment.</p>
+              <p>Developed NLP algorithms to extract clinical symptoms, generate automated triage logic, and support clinic decision-making flows. Optimized query matching using efficient data structures, reducing response latency by 36%.</p>
               <div className="project-tech">
                 <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Pandas</span>
-                <span>EHR Analysis</span>
+                <span>NLP</span>
+                <span>Data Structures</span>
               </div>
             </div>
 
@@ -667,6 +681,7 @@ function App() {
                 <div className="skill-grid">
                   <span className="skill-tag">Python</span>
                   <span className="skill-tag">Java</span>
+                  <span className="skill-tag">C#</span>
                   <span className="skill-tag">C++</span>
                   <span className="skill-tag">JavaScript</span>
                   <span className="skill-tag">Kotlin</span>
@@ -679,15 +694,15 @@ function App() {
                 <h3>Frameworks &amp; Tools</h3>
                 <div className="skill-grid">
                   <span className="skill-tag">React</span>
-                  <span className="skill-tag">Flask</span>
-                  <span className="skill-tag">FastAPI</span>
                   <span className="skill-tag">PyTorch</span>
+                  <span className="skill-tag">Flask</span>
+                  <span className="skill-tag">Unity</span>
+                  <span className="skill-tag">MongoDB</span>
                   <span className="skill-tag">Android Studio</span>
                   <span className="skill-tag">Git</span>
                   <span className="skill-tag">KNIME</span>
                   <span className="skill-tag">Figma</span>
                   <span className="skill-tag">Tableau</span>
-                  <span className="skill-tag">Linux CLI</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -954,6 +969,12 @@ function App() {
         <section id="certifications" className="section fade-in-section">
           <h2>Certifications</h2>
           <div className="awards-grid">
+            <div className="award-item">
+              <div className="award-content">
+                <h3>AI Agents with MongoDB Skill Badge</h3>
+                <p>MongoDB University &middot; Issued August 2026</p>
+              </div>
+            </div>
             <div className="award-item">
               <div className="award-content">
                 <h3>AI Agent Foundations</h3>
