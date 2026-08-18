@@ -10,6 +10,8 @@ import copenhagenPhoto from './IMG_9884.jpeg';
 import sunsetPhoto from './IMG_9882.jpeg';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { initGoogleAnalytics, trackSectionView, trackEvent } from './analytics';
 
 /** Ticker after About — aligned with Skills & Technologies + your stack */
 const MARQUEE_SKILLS = [
@@ -51,6 +53,16 @@ function App() {
   const statsRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('hero');
+
+  useEffect(() => {
+    initGoogleAnalytics();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && activeSection) {
+      trackSectionView(activeSection);
+    }
+  }, [activeSection, isLoading]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -214,7 +226,13 @@ function App() {
           ))}
         </ul>
         <div className="nav-right">
-          <a href="/Maanya_Chugh_Resume.pdf" className="btn-resume" target="_blank" rel="noopener noreferrer">
+          <a
+            href="/Maanya_Chugh_Resume.pdf"
+            className="btn-resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('resume_download', { link_url: '/Maanya_Chugh_Resume.pdf' })}
+          >
             Resume <span className="arrow-down">&#8595;</span>
           </a>
           <button className="theme-toggle" onClick={toggleDarkMode}>
@@ -1148,6 +1166,7 @@ function App() {
       >
         &uarr;
       </button>
+      <Analytics />
     </div>
   );
 }
