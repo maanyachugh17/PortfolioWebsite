@@ -15,10 +15,9 @@ import { initGoogleAnalytics, trackSectionView, trackEvent } from './analytics';
 
 /** Ticker after About — aligned with Skills & Technologies + your stack */
 const MARQUEE_SKILLS = [
-  'Python', 'PyTorch', 'Java', 'C#', 'C++', 'JavaScript', 'SQL', 'HTML/CSS',
-  'React', 'Flask', 'MongoDB', 'RAG', 'Git', 'KNIME', 'Unity',
-  'NLP', 'Multimodal AI', 'Kotlin', 'Swift', 'Android Studio',
-  'Machine Learning', 'Human-Centered Data Science', 'Figma', 'Tableau'
+  'Python', 'TypeScript', 'PyTorch', 'TensorFlow', 'Hugging Face', 'RAG', 'MCP', 'Agno',
+  'FastAPI', 'Flask', 'Streamlit', 'React', 'MongoDB', 'pgvector', 'Docker',
+  'Langfuse', 'OpenTelemetry', 'GitHub Actions', 'Multimodal AI', 'Human-Centered Data Science'
 ];
 
 const NAV_LINKS = [
@@ -43,7 +42,7 @@ function App() {
   const [showResearchMap, setShowResearchMap] = useState(false);
   const [expandedPhase, setExpandedPhase] = useState(null);
 
-  const roles = ['AI PM', 'AI Engineer', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
+  const roles = ['AI Engineer', 'AI PM', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [typePhase, setTypePhase] = useState('typing-in');
 
@@ -87,9 +86,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
+    const timer = setTimeout(() => setIsLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -267,8 +264,8 @@ function App() {
               <h1 className="hero-title">Maanya Chugh</h1>
               <p className="hero-subtitle"><span className={`typed-role ${typePhase}`}>{roles[roleIndex]}</span></p>
               <p className="hero-description">
-                IT student at UT Austin, specializing in Human-Centered Data Science. I build RAG and agentic AI systems at Tesla and Bank of America, research multimodal ML at the
-                GiSense Lab, and run Hook &apos;Em Hacks.
+                IT student at UT Austin, specializing in Human-Centered Data Science. I build production RAG systems at Tesla and Bank of America, research multimodal ML at the
+                GiSense Lab, and lead Hook &apos;Em Hacks.
               </p>
               <div className="hero-cta">
                 <a href="#projects" className="btn-primary">View My Work</a>
@@ -282,6 +279,8 @@ function App() {
                 <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <span className="link-sep">/</span>
                 <a href="https://devpost.com/maanyachugh17" target="_blank" rel="noopener noreferrer">Devpost</a>
+                <span className="link-sep">/</span>
+                <a href="https://x.com/maanya68971102" target="_blank" rel="noopener noreferrer">X</a>
               </div>
             </div>
             <div className="hero-image">
@@ -297,7 +296,7 @@ function App() {
           <span className="currently-label">Currently</span>
           <div className="currently-items">
             <div className="currently-item">
-              <span className="currently-emoji" role="img" aria-label="work">&#128188;</span> AI PM Intern at <strong>Tesla</strong>
+              <span className="currently-emoji" role="img" aria-label="work">&#128188;</span> AI Engineer PM Intern at <strong>Tesla</strong>
             </div>
             <div className="currently-item">
               <span className="currently-emoji" role="img" aria-label="building">&#9881;</span> Building <strong>Hook &apos;Em Hacks</strong>
@@ -322,7 +321,7 @@ function App() {
               </p>
               <p className="about-follow">
                 I run <strong>Hook &apos;Em Hacks</strong> end-to-end (sponsors, partnerships, ops) and help launch <strong>Hack48</strong>&apos;s Gen-Z hacker house in Austin.
-                I&apos;m an AI PM intern at <strong>Tesla</strong> and spent this summer as an SWE intern at <strong>Bank of America</strong>, building RAG platforms and production data workflows.
+                I&apos;m an AI Engineer PM intern at <strong>Tesla</strong> (RAG at scale for 400+ supply-chain users) and spent this summer as an SWE intern at <strong>Bank of America</strong>, shipping enterprise RAG and MongoDB vector search.
                 Open to research, collaborations, and opportunities where ML meets production systems.
               </p>
               <div className="about-stats" ref={statsRef}>
@@ -366,14 +365,14 @@ function App() {
                 <p className="education-degree">Bachelor of Science in Information Technology (Honors)</p>
                 <p className="education-details">Specializing in Human-Centered Data Science &middot; GPA: 3.8/4.0 &middot; Expected graduation: Winter 2027</p>
                 <p className="education-details">Relevant Coursework: Data Structures, Applied Machine Learning with Python, Text Mining &amp; NLP Essentials, Mobile Application Development, Virtual Reality &amp; Game Design, Ethical AI, UI/UX Design</p>
-                <p className="education-details">Activities: Hook &apos;Em Hacks (Director), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC &apos;25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
+                <p className="education-details">Activities: Hook &apos;Em Hacks (President), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC &apos;25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
               </div>
             </div>
             <div className="education-item">
               <div className="education-content">
                 <h3>Danish Institute for Study Abroad</h3>
                 <p className="education-degree">UT Global Ambassador &middot; Copenhagen</p>
-                <p className="education-details">Conducted hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug to Dec 2024</p>
+                <p className="education-details">Selected as 1 of 30 to conduct hands-on research in Scandinavian health systems; proposed tech-driven care solutions &middot; Aug to Dec 2024</p>
               </div>
             </div>
             <div className="education-item">
@@ -404,14 +403,15 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>AI PM Intern, Supply Chain Systems</h3>
+                    <h3>AI Engineer Product Manager Intern, Supply Chain and Process Systems</h3>
                     <span className="entry-company">Tesla</span>
                   </div>
                   <span className="entry-date">August 2026 to Present &middot; Fremont, CA</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Scaling an internal Retrieval-Augmented Generation (RAG) platform to support broader supply chain use cases by expanding its knowledge base without compromising retrieval accuracy</li>
-                  <li>Partnering with planners to identify new data sources and requirements, translating operational needs into reliable AI-assisted workflows</li>
+                  <li>Scaled an internal supply-chain AI platform from ~50 to 400 users, redesigning production RAG ingestion with structure-aware chunking and hybrid retrieval</li>
+                  <li>Built LLM-as-a-judge evaluation pipelines for grounding, retrieval, and tool use, improving agent performance from 36% to 64%, with subsequent fixes reaching 79%</li>
+                  <li>Implemented a Dream-RSI-inspired retrieval optimization loop, raising held-out retrieval scores from 0.761 to 0.838 (+10.1%), and targeted embedding updates that cut knowledge refreshes from days to minutes</li>
                 </ul>
               </div>
 
@@ -424,8 +424,37 @@ function App() {
                   <span className="entry-date">May 2026 to August 2026 &middot; Pennington, NJ</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Architected and deployed an enterprise RAG platform, ingesting 1000+ multi-format internal assets (PDFs, spreadsheets) to generate vector embeddings and leveraging MongoDB vector search to enable AI-powered retrieval and automate 40% of manual tasks</li>
+                  <li>Architected and deployed an enterprise RAG platform, ingesting 1,000+ multi-format internal assets (PDFs, spreadsheets) to generate vector embeddings and leveraging MongoDB vector search to enable AI-powered retrieval and automate 40% of manual tasks</li>
                   <li>Automated MongoDB operational workflows and data-processing pipelines, improving database platform scalability and reducing operational latency by 25%</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>Undergraduate Researcher, Multimodal AI</h3>
+                    <span className="entry-company">GiSense Lab, UT Austin</span>
+                  </div>
+                  <span className="entry-date">August 2025 to Present</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Designed and ran multimodal experiments across nearly 12,000 samples, evaluating audio, visual, text, and spatial features through ablation studies and achieving an R&sup2; of 0.63</li>
+                  <li>Fine-tuned models and optimized feature pipelines, hyperparameters, and training configurations, improving predictive performance by 10% and built automated preprocessing and evaluation workflows for data ingestion, feature extraction, experimentation, and reproducible result analysis</li>
+                  <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
+                </ul>
+              </div>
+
+              <div className="entry-item">
+                <div className="entry-header">
+                  <div>
+                    <h3>IT Intern, Internal Audit &amp; Data Analytics</h3>
+                    <span className="entry-company">The Depository Trust &amp; Clearing Corporation (DTCC)</span>
+                  </div>
+                  <span className="entry-date">May 2025 to August 2025 &middot; Jersey City, NJ</span>
+                </div>
+                <ul className="entry-details">
+                  <li>Engineered Python and KNIME automation workflows, cutting audit cycle times by 25% and standardizing processes across 3 internal teams</li>
+                  <li>Designed and deployed ML and analytics solutions, achieving 86% model accuracy and building a centralized KNIME Business Hub application supporting 50+ users</li>
                 </ul>
               </div>
 
@@ -458,21 +487,7 @@ function App() {
               <div className="entry-item">
                 <div className="entry-header">
                   <div>
-                    <h3>Operations &amp; Technology</h3>
-                    <span className="entry-company">Kupid Dating</span>
-                  </div>
-                  <span className="entry-date">January 2025 to January 2026</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Ran finances, logistics, and ops for multi-campus tours (UT Austin, UT Dallas, A&amp;M, UIUC, Rutgers)</li>
-                  <li>Built internal workflows and lightweight tooling for events and coordination</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
-                    <h3>Founder &amp; Director</h3>
+                    <h3>Founder &amp; President</h3>
                     <span className="entry-company">
                       <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
                         Hook &apos;Em Hacks at UT Austin
@@ -482,38 +497,9 @@ function App() {
                   <span className="entry-date">September 2025 to Present</span>
                 </div>
                 <ul className="entry-details">
-                  <li>Founded and directed operations for UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, venue logistics, and sponsor outreach</li>
+                  <li>Founded and led UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, securing corporate sponsorships, and directing event operations</li>
                   <li>Close sponsor relationships (Harper / YC W25, IBM, Vercel, HRT, AWS, Jane Street, and others)</li>
                   <li>Partner with SH1P and Velric on hiring and mission tracks inside the event</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
-                    <h3>Campus Ambassador</h3>
-                    <span className="entry-company">Perplexity</span>
-                  </div>
-                  <span className="entry-date">September 2025 to February 2026</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Drove adoption of Perplexity on campus through demos, workshops, and office hours</li>
-                  <li>Connected students and orgs with AI-powered research and productivity workflows</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
-                    <h3>Undergraduate Researcher, Multimodal AI</h3>
-                    <span className="entry-company">GiSense Lab, UT Austin</span>
-                  </div>
-                  <span className="entry-date">August 2025 to Present</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Designed and ran multimodal experiments across nearly 12,000 samples, evaluating audio, visual, text, and spatial features through ablation studies and achieving an R&sup2; of 0.63</li>
-                  <li>Fine-tuned models and optimized feature pipelines, hyperparameters, and training configurations, improving predictive performance by 10% and building automated preprocessing and evaluation workflows</li>
-                  <li>Partnered across disciplines on multimodal AI for urban planning and environmental monitoring</li>
                 </ul>
               </div>
 
@@ -541,21 +527,6 @@ function App() {
                 <ul className="entry-details">
                   <li>Built and deployed a custom AI agent on NeuralSeek&apos;s low-code platform, creating a portfolio-ready enterprise workflow tool</li>
                   <li>Delivered a competitive analysis of generative AI platforms, influencing product roadmap and market positioning</li>
-                </ul>
-              </div>
-
-              <div className="entry-item">
-                <div className="entry-header">
-                  <div>
-                    <h3>IT Intern, Internal Audit &amp; Data Analytics</h3>
-                    <span className="entry-company">The Depository Trust &amp; Clearing Corporation (DTCC)</span>
-                  </div>
-                  <span className="entry-date">May 2025 to August 2025 &middot; Jersey City, NJ</span>
-                </div>
-                <ul className="entry-details">
-                  <li>Engineered operational automation workflows using Python and KNIME, cutting audit cycle times by 25% and standardizing processes across 3 internal teams</li>
-                  <li>Designed and validated a machine-learning model to support operational decision-making, achieving 86% accuracy and contributing to enterprise AI governance standards</li>
-                  <li>Created and deployed a centralized KNIME Business Hub application to streamline audit processes, improving operational visibility and enabling coordination for 50+ users</li>
                 </ul>
               </div>
 
@@ -598,12 +569,12 @@ function App() {
                 <h3>Enterprise RAG Platform</h3>
                 <span className="project-tag">RAG / MongoDB</span>
               </div>
-              <p>Built production RAG systems at Bank of America and Tesla: ingested 1000+ multi-format internal documents, MongoDB vector search, and AI-assisted workflows that automated 40% of manual tasks and cut operational latency by 25%.</p>
+              <p>Production RAG at Tesla and Bank of America: structure-aware chunking, hybrid retrieval, LLM-as-a-judge evals that raised agent performance from 36% to 79%, and platforms scaled from ~50 to 400 supply-chain users.</p>
               <div className="project-tech">
-                <span>MongoDB</span>
                 <span>RAG</span>
+                <span>MongoDB</span>
+                <span>Langfuse</span>
                 <span>Python</span>
-                <span>Vector Search</span>
               </div>
             </div>
 
@@ -612,7 +583,7 @@ function App() {
                 <h3>AI-Driven Cardiac Risk Classifier</h3>
                 <span className="project-tag">ML/Healthcare</span>
               </div>
-              <p>Engineered machine learning pipelines on 10K+ EHRs, applying feature engineering to achieve 85% classification accuracy using Logistic Regression and Random Forest models. Streamlined data preprocessing stages to ensure fully reproducible workflows, reducing pipeline execution time by 30%.</p>
+              <p>Engineered ML pipelines on 10K+ EHRs, applying feature engineering to achieve 85% classification accuracy using Logistic Regression and Random Forest models. Optimized reproducible data preprocessing pipelines, reducing execution time by 30%.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>Scikit-learn</span>
@@ -626,7 +597,7 @@ function App() {
                 <h3>SymptomSync</h3>
                 <span className="project-tag">Clinical NLP</span>
               </div>
-              <p>Developed NLP algorithms to extract clinical symptoms, generate automated triage logic, and support clinic decision-making flows. Optimized query matching using efficient data structures, reducing response latency by 36%.</p>
+              <p>Developed NLP algorithms for clinical symptom extraction and automated triage, supporting clinic decision-making workflows. Optimized query matching using efficient data structures, reducing response latency by 36%.</p>
               <div className="project-tech">
                 <span>Python</span>
                 <span>NLP</span>
@@ -718,44 +689,56 @@ function App() {
                 <h3>Programming Languages</h3>
                 <div className="skill-grid">
                   <span className="skill-tag">Python</span>
-                  <span className="skill-tag">Java</span>
-                  <span className="skill-tag">C#</span>
-                  <span className="skill-tag">C++</span>
+                  <span className="skill-tag">TypeScript</span>
                   <span className="skill-tag">JavaScript</span>
-                  <span className="skill-tag">Kotlin</span>
-                  <span className="skill-tag">Swift</span>
+                  <span className="skill-tag">Java</span>
+                  <span className="skill-tag">C++</span>
                   <span className="skill-tag">SQL</span>
                   <span className="skill-tag">HTML/CSS</span>
+                  <span className="skill-tag">Kotlin</span>
+                  <span className="skill-tag">Swift</span>
                 </div>
               </div>
               <div className="skill-category">
                 <h3>Frameworks &amp; Tools</h3>
                 <div className="skill-grid">
-                  <span className="skill-tag">React</span>
                   <span className="skill-tag">PyTorch</span>
+                  <span className="skill-tag">TensorFlow</span>
+                  <span className="skill-tag">Hugging Face</span>
+                  <span className="skill-tag">Scikit-learn</span>
+                  <span className="skill-tag">RAG</span>
+                  <span className="skill-tag">MCP</span>
+                  <span className="skill-tag">Agno</span>
+                  <span className="skill-tag">FastAPI</span>
                   <span className="skill-tag">Flask</span>
-                  <span className="skill-tag">Unity</span>
+                  <span className="skill-tag">Streamlit</span>
+                  <span className="skill-tag">React</span>
+                  <span className="skill-tag">PostgreSQL</span>
+                  <span className="skill-tag">pgvector</span>
                   <span className="skill-tag">MongoDB</span>
-                  <span className="skill-tag">Android Studio</span>
+                  <span className="skill-tag">Docker</span>
+                  <span className="skill-tag">GitHub Actions</span>
+                  <span className="skill-tag">Langfuse</span>
+                  <span className="skill-tag">OpenTelemetry</span>
+                  <span className="skill-tag">Prometheus</span>
+                  <span className="skill-tag">Nginx</span>
                   <span className="skill-tag">Git</span>
                   <span className="skill-tag">KNIME</span>
                   <span className="skill-tag">Figma</span>
-                  <span className="skill-tag">Tableau</span>
+                  <span className="skill-tag">Unity</span>
                 </div>
               </div>
               <div className="skill-category">
                 <h3>Data Science &amp; Analytics</h3>
                 <div className="skill-grid">
                   <span className="skill-tag">Machine Learning</span>
+                  <span className="skill-tag">Multimodal AI</span>
+                  <span className="skill-tag">NLP</span>
                   <span className="skill-tag">Statistical Analysis</span>
-                  <span className="skill-tag">Financial Modeling</span>
-                  <span className="skill-tag">Risk Management</span>
-                  <span className="skill-tag">Time Series Analysis</span>
-                  <span className="skill-tag">Quantitative Finance</span>
                   <span className="skill-tag">Pandas</span>
                   <span className="skill-tag">NumPy</span>
-                  <span className="skill-tag">Scikit-learn</span>
-                  <span className="skill-tag">TensorFlow</span>
+                  <span className="skill-tag">Financial Modeling</span>
+                  <span className="skill-tag">Time Series Analysis</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -850,6 +833,23 @@ function App() {
         <section id="leadership" className="section fade-in-section">
           <h2>Leadership &amp; Activities</h2>
           <div className="entry-list">
+            <div className="entry-item">
+              <div className="entry-header">
+                <div>
+                  <h3>Founder &amp; President</h3>
+                  <span className="entry-company">
+                    <a href="https://www.hookemhacks.com" target="_blank" rel="noopener noreferrer">
+                      Hook &apos;Em Hacks
+                    </a>
+                  </span>
+                </div>
+                <span className="entry-date">September 2025 to Present</span>
+              </div>
+              <ul className="entry-details">
+                <li>Founded and led UT Austin&apos;s inaugural AI-focused hackathon with 250+ participants, managing a $10K budget, securing corporate sponsorships, and directing event operations</li>
+              </ul>
+            </div>
+
             <div className="entry-item">
               <div className="entry-header">
                 <div>
@@ -1113,6 +1113,7 @@ function App() {
             <a href="https://www.linkedin.com/in/maanya-chugh-53999a222/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://github.com/maanyachugh17" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://devpost.com/maanyachugh17" target="_blank" rel="noopener noreferrer">Devpost</a>
+            <a href="https://x.com/maanya68971102" target="_blank" rel="noopener noreferrer">X</a>
             <a href="mailto:maanyac17@utexas.edu">Email</a>
           </div>
         </div>
