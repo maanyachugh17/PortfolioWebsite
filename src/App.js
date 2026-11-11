@@ -42,13 +42,13 @@ function App() {
   const [showResearchMap, setShowResearchMap] = useState(false);
   const [expandedPhase, setExpandedPhase] = useState(null);
 
-  const roles = ['AI Engineer', 'AI PM', 'Hackathon Director', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
+  const roles = ['AI Engineer', 'AI Product Manager', 'Hackathon Founder', 'Product Manager', 'AI Researcher', 'Full Stack Engineer'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [typePhase, setTypePhase] = useState('typing-in');
 
   const [statsVisible, setStatsVisible] = useState(false);
   const [statValues, setStatValues] = useState({ gpa: 0, hackathon: 0, internships: 0 });
-  const [statsDone, setStatsDone] = useState(false);
+  const [statsDone, setStatsDone] = useState({ gpa: false, hackathon: false, internships: false });
   const statsRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('hero');
@@ -149,7 +149,7 @@ function App() {
         requestAnimationFrame(step);
       } else {
         setStatValues(prev => ({ ...prev, [key]: target }));
-        setStatsDone(true);
+        setStatsDone(prev => ({ ...prev, [key]: true }));
       }
     };
     requestAnimationFrame(step);
@@ -157,7 +157,7 @@ function App() {
 
   useEffect(() => {
     if (statsVisible) {
-      animateStat(3.8, 'gpa', 1200, true);
+      animateStat(4.0, 'gpa', 1200, true);
       animateStat(250, 'hackathon', 1000, false);
       animateStat(2, 'internships', 1000, false);
     }
@@ -196,6 +196,22 @@ function App() {
   };
 
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const locked = menuOpen || showResearchMap;
+    document.body.style.overflow = locked ? 'hidden' : '';
+    if (!locked) return undefined;
+    const onKey = (event) => {
+      if (event.key !== 'Escape') return;
+      setMenuOpen(false);
+      setShowResearchMap(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [menuOpen, showResearchMap]);
 
   if (isLoading) {
     return (
@@ -296,7 +312,7 @@ function App() {
           <span className="currently-label">Currently</span>
           <div className="currently-items">
             <div className="currently-item">
-              <span className="currently-emoji" role="img" aria-label="work">&#128188;</span> AI Engineer PM Intern at <strong>Tesla</strong>
+              <span className="currently-emoji" role="img" aria-label="work">&#128188;</span> AI Engineer Product Manager Intern at <strong>Tesla</strong>
             </div>
             <div className="currently-item">
               <span className="currently-emoji" role="img" aria-label="building">&#9881;</span> Building <strong>Hook &apos;Em Hacks</strong>
@@ -321,20 +337,20 @@ function App() {
               </p>
               <p className="about-follow">
                 I run <strong>Hook &apos;Em Hacks</strong> end-to-end (sponsors, partnerships, ops) and help launch <strong>Hack48</strong>&apos;s Gen-Z hacker house in Austin.
-                I&apos;m an AI Engineer PM intern at <strong>Tesla</strong> (RAG at scale for 400+ supply-chain users) and spent this summer as an SWE intern at <strong>Bank of America</strong>, shipping enterprise RAG and MongoDB vector search.
+                I&apos;m an AI Engineer Product Manager intern at <strong>Tesla</strong> (RAG at scale for 400+ supply-chain users) and spent this summer as an SWE intern at <strong>Bank of America</strong>, shipping enterprise RAG and MongoDB vector search.
                 Open to research, collaborations, and opportunities where ML meets production systems.
               </p>
               <div className="about-stats" ref={statsRef}>
                 <div className="stat-item">
-                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? statValues.gpa.toFixed(1) : '0.0'}</span>
+                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone.gpa ? 'done' : ''}`}>{statsVisible ? statValues.gpa.toFixed(1) : '0.0'}</span>
                   <span className="stat-label">GPA</span>
                 </div>
                 <div className="stat-item">
-                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? `${statValues.hackathon}+` : '0'}</span>
+                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone.hackathon ? 'done' : ''}`}>{statsVisible ? `${statValues.hackathon}+` : '0'}</span>
                   <span className="stat-label">Hackathon Builders</span>
                 </div>
                 <div className="stat-item">
-                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone ? 'done' : ''}`}>{statsVisible ? statValues.internships : '0'}</span>
+                  <span className={`stat-number ${statsVisible ? 'counting' : ''} ${statsDone.internships ? 'done' : ''}`}>{statsVisible ? statValues.internships : '0'}</span>
                   <span className="stat-label">Fortune 500 Internships</span>
                 </div>
               </div>
@@ -363,7 +379,7 @@ function App() {
               <div className="education-content">
                 <h3>University of Texas at Austin</h3>
                 <p className="education-degree">Bachelor of Science in Information Technology (Honors)</p>
-                <p className="education-details">Specializing in Human-Centered Data Science &middot; GPA: 3.8/4.0 &middot; Expected graduation: Winter 2027</p>
+                <p className="education-details">Specializing in Human-Centered Data Science &middot; GPA: 4.0/4.0 &middot; Expected graduation: Winter 2027</p>
                 <p className="education-details">Relevant Coursework: Data Structures, Applied Machine Learning with Python, Text Mining &amp; NLP Essentials, Mobile Application Development, Virtual Reality &amp; Game Design, Ethical AI, UI/UX Design</p>
                 <p className="education-details">Activities: Hook &apos;Em Hacks (President), Longhorn Developers (UX Design Fellow), Sigma Delta Tau (Social Chair PC &apos;25), Student Government, Indian Cultural Association, Type Texas, Texas Global Ambassador</p>
               </div>
@@ -1125,7 +1141,7 @@ function App() {
           <div className="research-modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="research-modal-header">
               <h2>Research Map: Ethical and Environmental Governance of Space Commercialization</h2>
-              <button className="research-modal-close" onClick={() => setShowResearchMap(false)}>&times;</button>
+              <button className="research-modal-close" onClick={() => setShowResearchMap(false)} aria-label="Close">&times;</button>
             </div>
             <div className="research-timeline">
               {[

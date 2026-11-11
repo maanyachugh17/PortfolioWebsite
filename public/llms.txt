@@ -1,0 +1,38 @@
+# Maanya Chugh
+
+> IT student at the University of Texas at Austin specializing in Human-Centered Data Science. AI Engineer Product Manager intern at Tesla. Founder of Hook 'Em Hacks. Portfolio: https://www.maanyachugh.info/
+
+Maanya Chugh is an undergraduate at UT Austin pursuing a Bachelor of Science in Information Technology (Honors), with a specialization in Human-Centered Data Science. GPA 4.0/4.0. Expected graduation: Winter 2027.
+
+She builds production retrieval-augmented generation systems, evaluates LLM agents, and researches multimodal machine learning. She is open to research, collaborations, and roles where machine learning meets production systems.
+
+## Currently
+
+- AI Engineer Product Manager intern at Tesla, Supply Chain and Process Systems, Fremont, CA (August 2026 to present). Scaled an internal supply-chain AI platform from about 50 to 400 users with structure-aware chunking and hybrid retrieval. LLM-as-a-judge evaluation raised agent performance from 36% to 64%, then 79%. A Dream-RSI-inspired retrieval loop raised held-out retrieval scores from 0.761 to 0.838 (+10.1%), and knowledge refreshes went from days to minutes.
+- Founder and president of Hook 'Em Hacks at UT Austin (September 2025 to present), an AI-focused hackathon with 250+ participants and a $10K budget. Site: https://www.hookemhacks.com
+- Undergraduate researcher in multimodal AI at the GiSense Lab, UT Austin (August 2025 to present). Experiments across nearly 12,000 samples, R² of 0.63.
+
+## Experience
+
+- SWE intern, Global Technology, Bank of America, Pennington, NJ (May 2026 to August 2026). Enterprise RAG platform over 1,000 multi-format internal documents using MongoDB vector search, automating 40% of manual tasks and reducing operational latency by 25%.
+- IT intern, Internal Audit and Data Analytics, DTCC, Jersey City, NJ (May 2025 to August 2025). Python and KNIME automation cut audit cycle times by 25%. ML and analytics solutions reached 86% model accuracy for 50+ users.
+- Austin City Lead, Hack48 (January 2026 to present).
+- AI extern, UT Austin WiSTEM (December 2025 to January 2026).
+- Growth intern, Fetii (August 2025 to November 2025).
+- AI Agent Builder intern, NeuralSeek (August 2025 to September 2025).
+
+## Education
+
+- University of Texas at Austin, B.S. Information Technology (Honors), Human-Centered Data Science, GPA 4.0/4.0, expected Winter 2027.
+- Danish Institute for Study Abroad, Copenhagen, UT Global Ambassador (August to December 2024). Selected as 1 of 30 for research on Scandinavian health systems.
+- Y Combinator AI Startup School (June to July 2025).
+
+## Links
+
+- Portfolio: https://www.maanyachugh.info/
+- Resume: https://www.maanyachugh.info/Maanya_Chugh_Resume.pdf
+- Email: maanyac17@utexas.edu
+- LinkedIn: https://www.linkedin.com/in/maanya-chugh-53999a222/
+- GitHub: https://github.com/maanyachugh17
+- Devpost: https://devpost.com/maanyachugh17
+- X: https://x.com/maanya68971102
